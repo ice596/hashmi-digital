@@ -22,10 +22,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Unzip site
         run: |
+          f=$(git log -1 --format= --name-only --diff-filter=AM -- '*.zip' | head -1)
+          echo "Deploying $f"
           mkdir _site
-          unzip -q site.zip -d _site
+          unzip -q "$f" -d _site
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
