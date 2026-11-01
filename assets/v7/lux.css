@@ -375,3 +375,25 @@ body.lux.acad .ac-shots{position:relative}
   .bot-grid>div:first-child{order:2}
   .bot-grid>.bot-copy{order:1}
 }
+
+/* a11y: contrast + portfolio heading level */
+.strip-lx li{color:#6E6356}
+body.lux .pmeta .tag{color:#6E6356}
+body.lux .pmeta h3{font:600 21px var(--serif);margin:12px 0 4px;color:#241F1A}
+.adc-meta span{color:rgba(255,248,241,.58)}
+
+/* hero reveals are CSS-only so first paint never waits on JS */
+@keyframes lx-rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hero-lx .rv{opacity:1;transform:none;transition:none;animation:lx-rise .7s var(--ease) both}
+.hero-lx .rv2{animation-delay:.09s}.hero-lx .rv3{animation-delay:.18s}.hero-lx .rv4{animation-delay:.27s}
+@media(prefers-reduced-motion:reduce){.hero-lx .rv{animation:none}}
+body.lux .form-wrap summary{color:var(--t70)}
+body.lux .foot-base{color:var(--t70)}
+/* AA contrast: solid colors for small text, deeper CTA orange */
+body.lux .form-wrap summary,body.lux .foot-base{color:#BFB9B1}
+body.lux.pricing .cmp-card .cmp-p small,body.lux.pricing .cmp-card .src,body.lux.pricing .tier-price .cur,body.lux.pricing .tier-price small,body.lux.pricing .tier-once,body.lux.pricing .tier-tag{color:#A9A29A}
+body.lux .btn{background:var(--or-deep)}
+body.lux .btn:hover{background:var(--or)}
+body.lux .close-cta p{color:#BFB9B1}
+body.lux .foot p.foot-base{color:#BFB9B1}
+body.lux.pricing .cmp-card .cmp-p small,body.lux.pricing .cmp-card .src,body.lux.pricing .promise span{opacity:1}
