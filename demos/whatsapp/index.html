@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Try WhatsApp booking | Hashmi Digital</title>
+<meta name="description" content="Try it yourself: message a salon on WhatsApp and get booked in seconds, in English or Arabic. A live demo of WhatsApp booking by Hashmi Digital.">
+<meta property="og:title" content="Try WhatsApp booking | Hashmi Digital">
+<meta property="og:description" content="Message a salon on WhatsApp and get booked in seconds. Try the demo.">
+<meta property="og:image" content="https://hashmi-digital.com/assets/img/og.png">
+<meta name="theme-color" content="#0B141A">
+<link rel="canonical" href="https://hashmi-digital.com/demos/whatsapp/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307080F'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='34' text-anchor='middle' fill='%23F1F0EC'%3EH.%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="/assets/v3/fonts/hanken.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Instrument Serif";src:url(/assets/demo/fonts/iserif.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(/assets/demo/fonts/iserif-i.woff2) format("woff2");font-style:italic;font-display:swap}
+@font-face{font-family:Archivo;src:url(/assets/v3/fonts/archivo.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:Hanken;src:url(/assets/v3/fonts/hanken.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:JBM;src:url(/assets/v3/fonts/jbm-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:PlexAr;src:url(/assets/v3/fonts/plexar-500.woff2) format("woff2");font-weight:500;font-display:swap}
+:root{--night:#0A0A0B;--paper:#F3EFE7;--ink:#0E0D0C;--dim:#605B55;--violet:#9A7A45;--line:rgba(11,12,18,.1);--wa:#25D366;--wa-d:#008069;--wall:#EFE7DE;--out:#D9FDD3;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font:400 15.5px/1.55 Hanken,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px max(18px,env(safe-area-inset-left)) 14px max(18px,env(safe-area-inset-right))}
+.top a{text-decoration:none;font-weight:600;font-size:14.5px;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.top a.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.wrap{max-width:1320px;margin:0 auto;padding:0 max(18px,env(safe-area-inset-left)) 40px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 400px minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:start}
+.intro{padding-top:clamp(10px,4vh,60px)}
+.mono{font:500 11.5px/1.3 JBM,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.mono i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--wa);margin-right:8px;vertical-align:middle}
+h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(48px,5.6vw,92px);line-height:.94;letter-spacing:-.02em;margin:16px 0 18px}
+h1 em{font-style:italic;color:var(--violet)}
+.intro p{margin:0 0 20px;font-size:17px;color:#3A3D4A;max-width:38ch}
+.tries{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:8px}
+.tries button{width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:14px;background:#fff;border:1px solid var(--line);font-size:14.5px;color:var(--ink);transition:border-color .2s,transform .3s var(--ease)}
+.tries button:hover{border-color:var(--ink);transform:translateX(3px)}
+.tries button span{color:var(--dim);font-size:12.5px}
+.cta{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 22px;border-radius:999px;background:var(--wa);color:#04210F;font-weight:700;text-decoration:none;font-size:15px}
+.cta:hover{filter:brightness(1.05)}
+.small{font-size:13px;color:var(--dim);margin-top:12px}
+
+/* phone + whatsapp */
+.phone{position:relative;width:100%;height:min(780px,calc(100svh - 90px));min-height:560px;border-radius:44px;padding:10px;background:linear-gradient(145deg,#2A2D3E,#0C0D14 60%);box-shadow:0 0 0 1px rgba(255,255,255,.1) inset,0 50px 100px -40px rgba(11,12,18,.6)}
+.app{position:relative;height:100%;border-radius:34px;overflow:hidden;display:flex;flex-direction:column;background:var(--wall)}
+.wa-top{display:flex;align-items:center;gap:10px;padding:34px 12px 10px;background:var(--wa-d);color:#fff}
+.wa-top .back{font-size:20px;opacity:.9;padding:0 2px}
+.av{width:38px;height:38px;border-radius:50%;background:#F2C6D7;color:#3B2140;display:grid;place-items:center;font-weight:800;font-size:15px;flex:0 0 auto}
+.wa-top b{display:block;font-size:15.5px;line-height:1.2}
+.wa-top small{font-size:12.5px;opacity:1}
+.wa-top .icons{margin-left:auto;display:flex;gap:16px;opacity:.9;font-size:16px}
+.verified{display:inline-grid;place-items:center;width:15px;height:15px;border-radius:50%;background:var(--wa);color:#fff;font-size:9px;margin-left:5px;vertical-align:1px}
+.chat{flex:1;overflow-y:auto;padding:12px 10px 6px;display:flex;flex-direction:column;gap:5px;background-color:var(--wall);background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1.5px);background-size:18px 18px;scroll-behavior:smooth;overscroll-behavior:contain}
+.day{align-self:center;background:#fff;color:#54656F;font-size:11.5px;padding:4px 10px;border-radius:8px;margin:4px 0 6px;box-shadow:0 1px .5px rgba(0,0,0,.08)}
+.sys{align-self:center;background:#FFF3C4;color:#54656F;font-size:11.5px;padding:5px 10px;border-radius:8px;margin:6px 0;text-align:center;max-width:90%}
+.b{max-width:82%;padding:6px 9px 4px;border-radius:10px;font-size:14.2px;line-height:1.38;position:relative;box-shadow:0 1px .5px rgba(0,0,0,.12);word-wrap:break-word;animation:pop .35s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:none}}
+.b.in{align-self:flex-start;background:#fff;border-top-left-radius:2px}
+.b.out{align-self:flex-end;background:var(--out);border-top-right-radius:2px}
+.b .t{display:block;text-align:right;font-size:10.5px;color:#667781;margin-top:2px;margin-left:24px}
+.b.out .t::after{content:" ✓✓";color:#53BDEB;letter-spacing:-2px}
+.b[dir=rtl]{font-family:PlexAr,Hanken,sans-serif}
+.b .card{margin:4px 0 2px;border-radius:8px;background:#F5F7F6;padding:10px;border-left:3px solid var(--wa-d);font-size:13.5px}
+.b .card b{display:block;font-size:14px;margin-bottom:4px}
+.b .card div{display:flex;justify-content:space-between;gap:12px;color:#3B4A54}
+.b .btns{display:grid;gap:1px;margin:6px -9px -4px;border-top:1px solid #E9EDEF}
+.b .btns span{display:block;text-align:center;color:#027EB5;font-weight:600;padding:9px 0;font-size:13.5px;border-top:1px solid #E9EDEF}
+.b .btns span:first-child{border-top:0}
+.b.map{padding:3px 3px 4px}
+.b.map .m{height:110px;border-radius:7px;background:linear-gradient(135deg,#CFE8D5,#E8E1D2);position:relative;overflow:hidden}
+.b.map .m::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(35deg,transparent 0 22px,rgba(255,255,255,.7) 22px 26px),repeating-linear-gradient(-55deg,transparent 0 40px,rgba(255,255,255,.55) 40px 44px)}
+.b.map .m::after{content:"📍";position:absolute;left:50%;top:44%;translate:-50% -50%;font-size:26px}
+.b.map p{margin:6px 6px 0;font-size:13.5px}
+.typing{align-self:flex-start;background:#fff;border-radius:10px;border-top-left-radius:2px;padding:10px 12px;display:none;gap:4px;box-shadow:0 1px .5px rgba(0,0,0,.12)}
+.typing.on{display:flex}
+.typing i{width:7px;height:7px;border-radius:50%;background:#9AA5AB;animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+.chips{display:flex;gap:6px;padding:6px 8px 4px;overflow-x:auto;scrollbar-width:none;background:var(--wall);flex:0 0 auto}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:0 0 auto;height:34px;padding:0 13px;border-radius:999px;border:1px solid #C9D3D8;background:#fff;color:#027EB5;font-weight:600;font-size:13px;white-space:nowrap}
+.chips button:hover{background:#F0F7FA}
+.chips button[dir=rtl]{font-family:PlexAr,Hanken,sans-serif}
+.bar{display:flex;gap:6px;padding:6px 8px 12px;background:var(--wall);flex:0 0 auto}
+.bar input{flex:1;min-width:0;height:44px;border-radius:22px;border:0;padding:0 16px;font:400 15px Hanken,PlexAr,sans-serif;outline:none;background:#fff;box-shadow:0 1px .5px rgba(0,0,0,.1)}
+.bar button{width:44px;height:44px;border-radius:50%;border:0;background:var(--wa-d);color:#fff;font-size:18px;display:grid;place-items:center}
+
+/* owner panel */
+.owner{padding-top:clamp(10px,4vh,60px)}
+.panel{background:var(--night);color:#E9EAF2;border-radius:24px;padding:20px;box-shadow:0 30px 60px -30px rgba(11,12,18,.5)}
+.panel h2{font-family:Archivo,sans-serif;font-stretch:78%;font-weight:650;font-size:26px;letter-spacing:-.01em;margin:6px 0 14px}
+.panel .mono{color:#8E91A6}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.stats div{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px}
+.stats b{display:block;font-family:Archivo,sans-serif;font-stretch:72%;font-weight:700;font-size:30px;line-height:1}
+.stats span{font-size:11.5px;color:#8E91A6}
+.list{display:grid;gap:6px}
+.row{display:grid;grid-template-columns:58px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);font-size:13.5px}
+.row .tm{font:500 12px JBM,monospace;color:#B9BBC9}
+.row b{display:block;font-weight:600;font-size:14px}
+.row small{color:#8E91A6}
+.row .st{font:600 10.5px JBM,monospace;padding:4px 8px;border-radius:999px;background:rgba(37,211,102,.14);color:#5BE38D;letter-spacing:.04em}
+.row.new{border-color:var(--wa);background:rgba(37,211,102,.08);animation:flash 1.6s var(--ease)}
+@keyframes flash{0%{transform:scale(.96);opacity:0}30%{transform:scale(1.02);opacity:1}100%{transform:none}}
+.note{margin-top:14px;font-size:13px;color:#8E91A6}
+.toast{position:fixed;left:50%;bottom:20px;translate:-50% 140%;background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-size:14px;z-index:20;transition:translate .5s var(--ease);box-shadow:0 20px 40px -20px rgba(0,0,0,.6)}
+.toast.on{translate:-50% 0}
+@media (max-width:1180px){.grid{grid-template-columns:minmax(0,1fr) 380px}.owner{grid-column:1/-1;padding-top:0}.panel{max-width:760px}}
+@media (max-width:760px){.grid{grid-template-columns:minmax(0,1fr)}.intro{padding-top:0}.intro p{font-size:16px}.tries{display:none}.phone{height:min(680px,calc(100svh - 70px));min-height:520px;border-radius:36px;padding:7px}.app{border-radius:30px}.top .hide-m{display:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a href="/#services">← Hashmi Digital</a>
+  <a class="dark hide-m" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%20tried%20the%20WhatsApp%20booking%20demo.%20I%27d%20like%20this%20for%20my%20business." target="_blank" rel="noopener">Get this for my business</a>
+</header>
+<main class="wrap">
+  <div class="grid">
+    <section class="intro" aria-label="About this demo">
+      <span class="mono"><i></i>Live demo · try it</span>
+      <h1>Message the salon. <em>Get booked.</em></h1>
+      <p>You're the customer. Message Glow Lounge like you normally would, in English or Arabic. The assistant replies on its own, books you in and reminds you. No staff needed.</p>
+      <ul class="tries" id="tries">
+        <li><button data-say="Hi, can I book nails tomorrow evening?">"Hi, can I book nails tomorrow evening?" <span>Book</span></button></li>
+        <li><button data-say="How much is a facial?">"How much is a facial?" <span>Prices</span></button></li>
+        <li><button data-say="Where are you?">"Where are you?" <span>Location</span></button></li>
+        <li><button data-say="أبي أحجز سشوار اليوم">"أبي أحجز سشوار اليوم" <span>Arabic</span></button></li>
+      </ul>
+      <a class="cta" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%20tried%20the%20WhatsApp%20booking%20demo.%20I%27d%20like%20this%20for%20my%20business." target="_blank" rel="noopener">Get this on my WhatsApp →</a>
+      <p class="small">Runs on your existing WhatsApp Business number. Live in about a week.</p>
+    </section>
+
+    <section aria-label="WhatsApp chat demo">
+      <div class="phone">
+        <div class="app">
+          <div class="wa-top">
+            <span class="back" aria-hidden="true">‹</span>
+            <span class="av" aria-hidden="true">G</span>
+            <div><b>Glow Lounge <span class="verified" aria-hidden="true">✓</span></b><small id="status">online</small></div>
+            <div class="icons" aria-hidden="true"><span>📹</span><span>📞</span></div>
+          </div>
+          <div class="chat" id="chat" aria-live="polite">
+            <span class="day">TODAY</span>
+            <span class="sys">🔒 Demo chat. Nothing is sent anywhere, try anything.</span>
+            <div class="typing" id="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+          <div class="chips" id="chips"></div>
+          <form class="bar" id="bar" autocomplete="off">
+            <input id="msg" placeholder="Message" aria-label="Type a message" enterkeyhint="send">
+            <button type="submit" aria-label="Send">➤</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="owner" aria-label="What the salon sees">
+      <div class="panel">
+        <span class="mono">What the salon owner sees</span>
+        <h2>Today at Glow Lounge</h2>
+        <div class="stats">
+          <div><b id="sMsg">27</b><span>Messages answered</span></div>
+          <div><b id="sBook">6</b><span>Bookings made</span></div>
+          <div><b>2s</b><span>Avg. reply time</span></div>
+        </div>
+        <div class="list" id="list">
+          <div class="row"><span class="tm">11:00</span><div><b>Mariam · Blow dry</b><small>Lina · AED 120</small></div><span class="st">PAID</span></div>
+          <div class="row"><span class="tm">13:30</span><div><b>Hessa · HydraFacial</b><small>Reem · AED 450</small></div><span class="st">CONFIRMED</span></div>
+          <div class="row"><span class="tm">16:00</span><div><b>Sara · Gel manicure</b><small>Joanna · AED 140</small></div><span class="st">CONFIRMED</span></div>
+        </div>
+        <p class="note">Every booking lands here and in the salon's calendar. Reminders go out 2 hours before, so fewer people forget.</p>
+      </div>
+    </section>
+  </div>
+</main>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const chat = $('#chat'), typing = $('#typing'), chipsEl = $('#chips'), input = $('#msg'), statusEl = $('#status');
+  const SV = {
+    gel:   { en: 'Gel manicure', ar: 'مناكير جل', p: 140, pro: 'Joanna', proAr: 'جوانا', k: /(nail|mani|gel|pedi|biab|أظافر|اظافر|مناكير|باديكير)/i },
+    blow:  { en: 'Blow dry', ar: 'سشوار', p: 120, pro: 'Lina', proAr: 'لينا', k: /(blow|hair|cut|colou?r|keratin|شعر|سشوار|قص|صبغ|كيراتين)/i },
+    facial:{ en: 'Signature facial', ar: 'فيشل', p: 320, pro: 'Reem', proAr: 'ريم', k: /(facial|hydra|skin|face|فيشل|بشرة|وجه|هايدرا)/i },
+    lash:  { en: 'Lash lift and tint', ar: 'رفع الرموش', p: 220, pro: 'Aisha', proAr: 'عائشة', k: /(lash|brow|thread|رموش|حواجب|خيط)/i }
+  };
+  const DAYS = {
+    today: { en: 'Today', ar: 'اليوم', k: /(today|tonight|now|اليوم|الليلة)/i, times: ['5:30 PM', '7:00 PM', '8:30 PM'] },
+    tom:   { en: 'Tomorrow', ar: 'بكرة', k: /(tomorrow|tmrw|بكره|بكرة|باجر|غدا|غداً)/i, times: ['11:00 AM', '5:30 PM', '7:00 PM'] },
+    sat:   { en: 'Saturday', ar: 'السبت', k: /(sat|saturday|weekend|السبت|ويكند)/i, times: ['10:30 AM', '2:00 PM', '6:00 PM'] }
+  };
+  const S = { stage: 'idle', svc: null, day: null, time: null, lang: 'en', msgs: 27, books: 6 };
+  const isAr = t => /[؀-ۿ]/.test(t);
+  const now = () => new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  const L = (en, ar) => S.lang === 'ar' ? ar : en;
+  const toast = (t) => { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toast.h); toast.h = setTimeout(() => el.classList.remove('on'), 2600); };
+
+  const add = (html, who, extra = '') => {
+    const d = document.createElement('div');
+    d.className = 'b ' + who + (extra ? ' ' + extra : '');
+    if (who === 'in' && S.lang === 'ar') d.dir = 'rtl';
+    if (who === 'out' && isAr(html)) d.dir = 'rtl';
+    d.innerHTML = html + `<span class="t">${now()}</span>`;
+    chat.insertBefore(d, typing);
+    chat.scrollTop = chat.scrollHeight;
+    return d;
+  };
+  const sys = (t) => { const s = document.createElement('span'); s.className = 'sys'; s.textContent = t; chat.insertBefore(s, typing); chat.scrollTop = chat.scrollHeight; };
+  const esc = t => t.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const chips = (list) => {
+    chipsEl.innerHTML = '';
+    list.forEach(c => { const b = document.createElement('button'); b.type = 'button'; b.textContent = c; if (isAr(c)) b.dir = 'rtl'; b.addEventListener('click', () => send(c)); chipsEl.appendChild(b); });
+  };
+  let q = Promise.resolve();
+  const reply = (fn, delay = 900) => { q = q.then(() => new Promise(res => {
+    statusEl.textContent = L('typing…', 'يكتب…'); typing.classList.add('on'); chat.scrollTop = chat.scrollHeight;
+    setTimeout(() => { typing.classList.remove('on'); statusEl.textContent = 'online'; fn(); S.msgs++; $('#sMsg').textContent = S.msgs; res(); }, delay);
+  })); };
+
+  const menuChips = () => chips(S.lang === 'ar' ? ['أبي أحجز', 'الأسعار', 'وين موقعكم؟', 'أوقات الدوام'] : ['Book an appointment', 'Prices', 'Where are you?', 'Opening hours']);
+  const svcChips = () => chips(Object.values(SV).map(s => S.lang === 'ar' ? s.ar : `${s.en} · AED ${s.p}`));
+  const dayChips = () => chips(Object.values(DAYS).map(d => L(d.en, d.ar)));
+  const timeChips = () => chips(S.day.times);
+
+  const askNext = () => {
+    if (!S.svc) { S.stage = 'svc'; reply(() => { add(L('Sure! What would you like to book?', 'أكيد! وش الخدمة اللي تبينها؟'), 'in'); svcChips(); }); return; }
+    if (!S.day) { S.stage = 'day'; reply(() => { add(L(`${S.svc.en}, great choice. Which day works for you?`, `${S.svc.ar}، اختيار حلو. أي يوم يناسبك؟`), 'in'); dayChips(); }); return; }
+    if (!S.time) {
+      S.stage = 'time';
+      reply(() => { add(L(`${S.day.en} ${S.svc.pro} has <b>${S.day.times.join('</b>, <b>')}</b>. Which one works?`, `${S.day.ar} عند ${S.svc.proAr} مواعيد: <b>${S.day.times.join('</b>، <b>')}</b>. أي وقت يناسبك؟`), 'in'); timeChips(); }, 1100);
+      return;
+    }
+    S.stage = 'name';
+    reply(() => { add(L('Perfect. What name should I put the booking under?', 'تمام. باسم مين أسجل الحجز؟'), 'in'); chips([]); });
+  };
+
+  const confirm = (name) => {
+    const n = esc(name.trim().split(/\s+/)[0].slice(0, 20)) || L('Guest', 'ضيفتنا');
+    S.stage = 'done';
+    reply(() => {
+      add(`${L(`Booked ✓ See you ${S.day.en.toLowerCase()}, ${n}!`, `تم الحجز ✓ نشوفك ${S.day.ar} يا ${n}!`)}
+        <div class="card"><b>${L(S.svc.en, S.svc.ar)}</b>
+          <div><span>${L('With', 'مع')}</span><span>${L(S.svc.pro, S.svc.proAr)}</span></div>
+          <div><span>${L('When', 'الموعد')}</span><span>${L(S.day.en, S.day.ar)}, ${S.time}</span></div>
+          <div><span>${L('Price', 'السعر')}</span><span>AED ${S.svc.p}</span></div></div>
+        <div class="btns"><span>${L('Pay AED 50 deposit to hold it', 'ادفع عربون ٥٠ درهم لتثبيت الموعد')}</span><span>${L('Add to calendar', 'أضف للتقويم')}</span></div>`, 'in');
+      S.books++; $('#sBook').textContent = S.books;
+      const row = document.createElement('div'); row.className = 'row new';
+      row.innerHTML = `<span class="tm">${S.time.replace(' ', '')}</span><div><b>${n} · ${S.svc.en}</b><small>${S.svc.pro} · ${S.day.en} · AED ${S.svc.p}</small></div><span class="st">NEW</span>`;
+      $('#list').prepend(row);
+      toast(L('New booking added to the salon\'s calendar', 'تمت إضافة حجز جديد لتقويم الصالون'));
+      chips([]);
+    }, 1200);
+    reply(() => { add(L("I'll send you a reminder 2 hours before. Anything else?", 'بنرسل لك تذكير قبل الموعد بساعتين. تبين شي ثاني؟'), 'in'); }, 900);
+    q = q.then(() => new Promise(res => setTimeout(res, 1600)));
+    q = q.then(() => { sys(L('⏩ Fast forward: 2 hours before the appointment', '⏩ بعد ساعات: قبل الموعد بساعتين')); });
+    reply(() => {
+      add(`${L(`Hi ${n}! Reminder: ${S.svc.en} with ${S.svc.pro} at ${S.time}. See you soon 💅`, `هلا ${n}! تذكير: ${S.svc.ar} مع ${S.svc.proAr} الساعة ${S.time}. ننتظرك 💅`)}<div class="btns"><span>${L('Confirm', 'تأكيد')}</span><span>${L('Reschedule', 'تغيير الموعد')}</span></div>`, 'in');
+      menuChips();
+    }, 1000);
+  };
+
+  const pickTime = (t) => {
+    const m = t.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm|ص|م)?/i); if (!m) return null;
+    const h = +m[1];
+    return S.day.times.find(x => +x.split(':')[0] === h) || null;
+  };
+
+  const handle = (raw) => {
+    const t = raw.trim(); if (!t) return;
+    if (isAr(t)) S.lang = 'ar';
+    else if (S.stage !== 'name' && /[a-z]{3,}/i.test(t) && !/^\d{1,2}(:\d{2})?\s*(am|pm)?$/i.test(t) && !Object.values(DAYS).some(d => t === d.en) && !Object.values(SV).some(x => t.startsWith(x.en))) S.lang = 'en';
+    const sv = Object.values(SV).find(s => s.k.test(t) || t.startsWith(s.en) || t === s.ar);
+    const dy = Object.values(DAYS).find(d => d.k.test(t) || t === d.en || t === d.ar);
+
+    if (S.stage === 'name') { confirm(t); return; }
+    if (S.stage === 'time') {
+      const tm = S.day.times.includes(t) ? t : pickTime(t);
+      if (tm) { S.time = tm; askNext(); return; }
+      if (dy) { S.day = dy; S.time = null; askNext(); return; }
+    }
+    if (S.stage === 'day' && dy) { S.day = dy; askNext(); return; }
+    if (S.stage === 'svc' && sv) { S.svc = sv; if (dy) S.day = dy; askNext(); return; }
+
+    if (/(cancel|reschedule|change my|الغ|إلغاء|تغيير)/i.test(t)) {
+      reply(() => { add(L('No problem. I can move your booking. Which day would you prefer?', 'ولا يهمك. أقدر أغير موعدك. أي يوم يناسبك؟'), 'in'); }); S.day = null; S.time = null; if (S.svc) { S.stage = 'day'; q = q.then(dayChips); } else askNext(); return;
+    }
+    const priceQ = /(price|how much|cost|menu|كم|سعر|أسعار|اسعار|بكم)/i.test(t);
+    if (priceQ && sv) {
+      S.pending = sv;
+      reply(() => { add(L(`A ${sv.en.toLowerCase()} is <b>AED ${sv.p}</b> and takes about an hour with ${sv.pro}. Want me to book it?`, `${sv.ar} سعره <b>${sv.p} درهم</b> وياخذ تقريباً ساعة مع ${sv.proAr}. تبين أحجزه لك؟`), 'in'); chips(S.lang === 'ar' ? ['أحجزه', 'باقي الأسعار'] : ['Book it', 'Other prices']); });
+      return;
+    }
+    if (/(book|appointment|slot|reserve|available|yes|sure|حجز|احجز|أحجز|احجزه|أحجزه|موعد|متوفر|ايه|إيه|نعم)/i.test(t) || sv) {
+      S.svc = sv || S.pending || null; S.pending = null; S.day = dy || null; S.time = null; askNext(); return;
+    }
+    if (priceQ || /other prices|باقي الأسعار/i.test(t)) {
+      reply(() => {
+        const lines = Object.values(SV).map(s => `${L(s.en, s.ar)}: <b>AED ${s.p}</b>`).join('<br>');
+        add(`${L('Here are our most booked services:', 'هذي أكثر خدماتنا طلباً:')}<br>${lines}<br>${L('Want me to book one for you?', 'تبين أحجز لك وحدة؟')}`, 'in');
+        chips(S.lang === 'ar' ? ['أبي أحجز', 'وين موقعكم؟'] : ['Book an appointment', 'Where are you?']);
+      });
+      return;
+    }
+    if (/(where|location|address|map|parking|وين|موقع|عنوان|مواقف)/i.test(t)) {
+      reply(() => { add(`<div class="m"></div><p><b>Glow Lounge</b><br>${L('Al Reem Island, Shams Boutik, ground floor. Free parking at the back.', 'جزيرة الريم، شمس بوتيك، الطابق الأرضي. مواقف مجانية في الخلف.')}</p>`, 'in', 'map'); menuChips(); });
+      return;
+    }
+    if (/(open|hours|close|timing|دوام|تفتح|تسكر|ساعات|أوقات|اوقات)/i.test(t)) {
+      reply(() => { add(L('We\'re open every day, 10 AM to 10 PM. Friday from 2 PM.', 'نفتح كل يوم من ١٠ الصبح لين ١٠ الليل. الجمعة من الساعة ٢.'), 'in'); menuChips(); });
+      return;
+    }
+    if (/(thank|thx|ty\b|شكرا|شكراً|مشكور|يعطيك)/i.test(t)) {
+      reply(() => { add(L('You\'re welcome! 💗', 'العفو! 💗'), 'in'); });
+      return;
+    }
+    if (/^(hi|hello|hey|salam|good (morning|evening)|السلام|مرحبا|هلا|اهلا|أهلا)/i.test(t)) {
+      reply(() => { add(L('Hi! Welcome to Glow Lounge 💗 I can book you in, share prices or send our location. What would you like?', 'هلا والله! أهلاً بك في جلو لاونج 💗 أقدر أحجز لك، أرسل الأسعار أو الموقع. وش تحتاجين؟'), 'in'); menuChips(); });
+      return;
+    }
+    reply(() => { add(L('Good question! I\'ll pass that to the team and they\'ll reply here shortly. Meanwhile, I can book you in, share prices or send our location.', 'سؤال حلو! بحوله للفريق ويردون عليك هنا قريب. وفي الوقت نفسه أقدر أحجز لك أو أرسل الأسعار والموقع.'), 'in'); menuChips(); });
+  };
+
+  const send = (t) => { if (!t.trim()) return; add(esc(t), 'out'); chips([]); handle(t); };
+  $('#bar').addEventListener('submit', e => { e.preventDefault(); const v = input.value; input.value = ''; send(v); });
+  document.querySelectorAll('#tries button').forEach(b => b.addEventListener('click', () => { send(b.dataset.say); if (innerWidth < 760) document.querySelector('.phone').scrollIntoView({ behavior: 'smooth' }); }));
+
+  // opening message
+  reply(() => { add('Hi! 👋 This is Glow Lounge. How can I help you today?', 'in'); menuChips(); }, 700);
+})();
+</script>
+</body>
+</html>

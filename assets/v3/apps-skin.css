@@ -1,0 +1,34 @@
+/* v3 skin for /apps/: same palette and type as the homepage, layout untouched */
+@font-face{font-family:"Archivo";src:url(fonts/archivo.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(../demo/fonts/iserif.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(../demo/fonts/iserif-i.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(fonts/jbm-400.woff2) format("woff2");font-weight:400;font-display:swap}
+:root{
+  --paper:#F3EFE7;--paper-2:#E8E1D5;--card:#FBF9F4;--ink:#0E0D0C;--ink-2:#2D2A26;--stone:#77716A;
+  --line:rgba(14,13,12,.12);--line-2:rgba(14,13,12,.22);
+  --brass:#D4B57E;--brass-ink:#9A7A45;--night:#0A0A0B;--night-2:#131312;--cream:#F3EFE7;
+  --serif:"Instrument Serif","Times New Roman",serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+.display,.h2,.h3,.logo,.drawer a,.marquee-item,.footer .big-cta,.wordmark,
+.proof .app-id b,.story-steps .st h3,.acard h3,.acard.next .media b,.incl-item h4,.tstep h4,.plan h3,.plan .amt,.care b,.q button,.calc-in output,.calc-out b,.cmp-take b,.rcpt .tot b,.promise-seal p,.promise-list h4{
+  font-stretch:72%;letter-spacing:-.022em;line-height:.95}
+.display,.h2,.marquee-item,.wordmark,.story-steps .st h3,.acard.next .media b,.plan .amt,.calc-out b,.footer .big-cta,.promise-seal p{font-weight:640}
+.h3,.proof .app-id b,.acard h3,.incl-item h4,.tstep h4,.plan h3,.care b,.q button,.cmp-take b,.rcpt .tot b,.promise-list h4,.calc-in output{font-weight:600}
+.logo{font-stretch:80%;font-weight:700;letter-spacing:-.01em}
+.display em,.h2 em,.h3 em,.footer .big-cta em,.acard.next .media b em,.promise-seal p em{font-style:normal;color:var(--brass)}
+.on-light .display em,.on-light .h2 em{color:var(--brass-ink)}
+.q button{line-height:1.1}
+.promise-seal p{line-height:1.05}
+::selection{background:#C9A86A;color:#0E0D0C}
+
+/* v4 luxury: serif display at its true weight, italic accents */
+.display,.h2,.h3,.logo,.drawer a,.marquee-item,.footer .big-cta,.wordmark,.proof .app-id b,.story-steps .st h3,.acard h3,.acard.next .media b,.incl-item h4,.tstep h4,.plan h3,.plan .amt,.care b,.q button,.calc-in output,.calc-out b,.cmp-take b,.rcpt .tot b,.promise-seal p,.promise-list h4{font-weight:400!important;font-stretch:normal!important;letter-spacing:-.02em}
+.logo{font-family:"Hanken Grotesk",system-ui,sans-serif;font-weight:700!important}
+.display em,.h2 em,.h3 em,.footer .big-cta em,.acard.next .media b em,.promise-seal p em{font-style:italic}
+.wa-float,.wa{background:#121211!important;border:1px solid rgba(212,181,126,.45)}
+:root{--stone:#6A645D;--brass-ink:#82652F}
+.display em,.h2 em,.h3 em{color:var(--brass-ink)}
+.on-dark .display em,.on-dark .h2 em,.on-dark .h3 em,.ahero.dark .display em,.media b em,.footer .big-cta em,.hot em,.calc-out em{color:var(--brass)}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Free academy booking check (60 seconds) | Hashmi Digital</title>
+<meta name="description" content="Answer 6 quick questions and get a score out of 100 for how smooth your academy&#x27;s booking, payments and reminders are, plus the 3 fixes that save the most time.">
+<link rel="canonical" href="https://hashmi-digital.com/academies/check/">
+<meta property="og:title" content="Free academy booking check (60 seconds) | Hashmi Digital">
+<meta property="og:description" content="Answer 6 quick questions and get a score out of 100 for how smooth your academy&#x27;s booking, payments and reminders are, plus the 3 fixes that save the most time.">
+<meta property="og:image" content="https://hashmi-digital.com/assets/img/work-tide.webp">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FFF8F1">
+<link rel="icon" href="/assets/v7/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/v7/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/v7/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/v7/site.css?v=20">
+<link rel="stylesheet" href="/assets/v7/acad.css?v=1">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="logo" href="/" aria-label="Hashmi Digital home"><span class="logo-tp" data-tappy="hips" data-label=""></span><span>hashmi digital</span></a>
+    <nav class="top-nav" aria-label="Main">
+      <a href="/#build">What we build</a>
+      <a href="/#work">Our work</a>
+      <a href="/academies/">For academies</a>
+      <a href="/pricing/">Prices</a>
+    </nav>
+    <a class="btn btn-sm" href="/academies/check/"><span class="hide-s">Free </span>booking check</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="chk">
+  <span class="tag">Free · 60 seconds · no sign-up</span>
+  <h1 style="margin-top:12px">How smooth is your academy's booking?</h1>
+  <p class="lede">6 quick questions. Get a score out of 100 and the 3 things that would save your team the most time.</p>
+  <div class="chk-bar"><i id="bar"></i></div>
+  <div id="quiz"></div>
+  <div class="chk-res" id="res">
+    <div class="chk-score"><div class="chk-ring" id="ring"><b id="num">0</b></div><div><h2 id="rt"></h2><p id="rs"></p></div></div>
+    <h2 style="font-size:24px;margin:24px 0 12px">What to fix first</h2>
+    <div id="fixes"></div>
+    <div class="chk-send">
+      <h2>Want your full report and a demo set up for your academy?</h2>
+      <p>Send it to Ali on WhatsApp. He'll reply with a free setup plan for your academy, usually the same day.</p>
+      <input id="aname" placeholder="Your academy's name" autocomplete="organization">
+      <a class="btn btn-wa" id="send" href="#" target="_blank" rel="noopener">Send my report on WhatsApp</a>
+      <p style="margin:14px 0 0;font-size:15px">Or email <a href="mailto:hello@hashmi-digital.com" style="color:#fff">hello@hashmi-digital.com</a> · <a href="/academies/" style="color:#fff">How the free month works</a></p>
+    </div>
+    <button class="chk-back" id="again">Start again</button>
+  </div>
+</section>
+<script>
+(function(){
+var QS=[{"q": "How does a new parent book a trial today?", "hint": "Think about what happens when they tap your website or Instagram.", "o": [["They book a slot online and get a confirmation", 3], ["They fill a form and wait for a call back", 1], ["They message us on WhatsApp or call", 1], ["Not sure, it's different every time", 0]], "fix": ["Make trial booking instant", "Parents who have to wait for a callback often book somewhere else. Let them pick a slot and get a confirmation straight away."]}, {"q": "Can parents see your prices and schedule before they contact you?", "hint": "", "o": [["Yes, both are on our website", 3], ["Schedule only", 2], ["Prices only", 1], ["No, they have to ask", 0]], "fix": ["Show prices and times", "Every \"how much?\" message is a parent who might not ask. Put your schedule and packages where they can see them."]}, {"q": "How do parents pay for a term or package?", "hint": "", "o": [["Online, by card or Apple Pay", 3], ["Bank transfer and a screenshot", 1], ["Cash or card at the front desk", 1], ["A mix of everything", 0]], "fix": ["Let parents pay in one tap", "Transfers and screenshots mean someone matching payments by hand. A pay link in a WhatsApp message is faster for everyone."]}, {"q": "How do you know when a package or term is running out?", "hint": "", "o": [["The system tracks it and reminds the parent", 3], ["We check a spreadsheet", 1], ["The coach or front desk notices", 0], ["We usually find out late", 0]], "fix": ["Track balances automatically", "When attendance updates the balance, parents get reminded before it runs out, and unpaid sessions stop slipping through."]}, {"q": "Do parents get a reminder before each class?", "hint": "", "o": [["Yes, automatically", 3], ["Sometimes, we send them by hand", 1], ["Only when something changes", 1], ["No", 0]], "fix": ["Send a reminder the night before", "A one-tap confirm message the evening before is the simplest way to cut no-shows and free up spots for make-ups."]}, {"q": "How do coaches take attendance?", "hint": "", "o": [["On a phone or tablet, synced live", 3], ["On paper, then typed up", 1], ["In a WhatsApp group", 1], ["We don't track it consistently", 0]], "fix": ["One-tap attendance", "When coaches mark attendance on their phone, package balances, parent updates and office reports all update without retyping."]}], WA="971501351630";
+var i=0, ans=[];
+var quiz=document.getElementById('quiz'), bar=document.getElementById('bar');
+function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function show(){
+  bar.style.width=(i/QS.length*100)+'%';
+  if(i>=QS.length) return result();
+  var q=QS[i];
+  quiz.innerHTML='<div class="chk-q"><p class="hint" style="margin:0 0 6px">Question '+(i+1)+' of '+QS.length+'</p><h2>'+esc(q.q)+'</h2>'+(q.hint?'<p class="hint">'+esc(q.hint)+'</p>':'<div style="height:12px"></div>')+'<div class="chk-opts">'+q.o.map(function(o,k){return '<button data-k="'+k+'">'+esc(o[0])+'</button>'}).join('')+'</div>'+(i?'<button class="chk-back" id="bk">&larr; Back</button>':'')+'</div>';
+  quiz.querySelectorAll('[data-k]').forEach(function(b){b.onclick=function(){ans[i]=+b.dataset.k;i++;show()}});
+  var bk=document.getElementById('bk'); if(bk) bk.onclick=function(){i--;show()};
+}
+function result(){
+  quiz.style.display='none'; document.getElementById('res').style.display='block';
+  var pts=0,max=0,gaps=[];
+  QS.forEach(function(q,k){var p=q.o[ans[k]][1];pts+=p;max+=3;if(p<3)gaps.push({k:k,p:p})});
+  var s=Math.round(pts/max*100);
+  gaps.sort(function(a,b){return a.p-b.p});
+  var ring=document.getElementById('ring'), num=document.getElementById('num');
+  var c=s>=75?'#2FCB84':s>=45?'#FFB020':'#E8560C'; ring.style.setProperty('--c',c);
+  var t=0, iv=setInterval(function(){t+=2;if(t>=s){t=s;clearInterval(iv)}ring.style.setProperty('--p',t);num.textContent=t},16);
+  document.getElementById('rt').textContent=s>=75?'Strong setup':s>=45?'Room to save real time':'Your team is doing a lot by hand';
+  document.getElementById('rs').textContent=s>=75?'You\'re ahead of most academies. A couple of small fixes left.':s>=45?'A few changes would cut a lot of messages and chasing.':'Good news: these are the easiest wins to fix.';
+  var top=gaps.slice(0,3), html='';
+  top.forEach(function(g){var f=QS[g.k].fix;html+='<div class="chk-fix"><b>'+esc(f[0])+'</b><p>'+esc(f[1])+'</p></div>'});
+  if(!top.length) html='<div class="chk-fix good"><b>Nothing urgent</b><p>Your booking flow covers the basics. Want to see what WhatsApp-first booking adds on top? Try the demo.</p></div>';
+  document.getElementById('fixes').innerHTML=html;
+  function link(){var n=document.getElementById('aname').value.trim()||'(name)';
+    var m='Hi Ali, I took the academy booking check.\nAcademy: '+n+'\nScore: '+s+'/100\nTop fixes: '+top.map(function(g){return QS[g.k].fix[0]}).join(', ')+'\nCan you send me the full report and a setup plan?';
+    document.getElementById('send').href='https://wa.me/'+WA+'?text='+encodeURIComponent(m)}
+  link(); document.getElementById('aname').oninput=link;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.getElementById('again').onclick=function(){i=0;ans=[];quiz.style.display='';document.getElementById('res').style.display='none';show()};
+show();
+})();
+</script>
+</main>
+
+<footer class="foot">
+  <div class="foot-tp" data-tappy="wave" data-label=""></div>
+  <div class="wrap foot-in">
+    <div><b>hashmi digital</b><p>Apps, websites and WhatsApp booking. Made in Abu Dhabi.</p><p class="ar" lang="ar">صُنع في أبوظبي</p></div>
+    <div><b>Build</b><a href="/demos/whatsapp/">WhatsApp booking</a><a href="/demos/qahwa/">Café app</a><a href="/demos/glow/">Salon app</a><a href="/academies/">For academies</a><a href="/academies/check/">Free booking check</a><a href="/demos/academy/">Academy demo</a><a href="/pricing/">Prices</a></div>
+    <div><b>Talk</b><a href="https://wa.me/971501351630" target="_blank" rel="noopener">WhatsApp</a><a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3mhcpczZA-G5d07i7NI6GrL7w4VSBRHbVHX_467HKG3_Ng0UHUy9YvW1HwX8df-BC1B2a6IXee" target="_blank" rel="noopener">Book a free call</a><a href="mailto:hello@hashmi-digital.com">hello@hashmi-digital.com</a><a href="https://apps.apple.com/app/earned-reclaim-your-time/id6786606147" target="_blank" rel="noopener">Earned on the App Store</a></div>
+  </div>
+  <div class="wrap"><p class="foot-base">© <span id="yr">2026</span> Hashmi Digital, Abu Dhabi</p></div>
+</footer>
+
+<script src="/assets/v7/tappy.js"></script>
+<script src="/assets/v7/site.js?v=4" defer></script>
+<script src="/assets/v7/wa.js?v=12" defer></script>
+</body>
+</html>

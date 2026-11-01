@@ -272,3 +272,94 @@ body.lux .foot-base{border-top:1px solid var(--hair);padding:22px 0 30px;font-si
   .strip-lx li{padding:6px 14px;font-size:11.5px}
   .vid-phone{width:min(280px,80vw)}
 }
+
+/* ===== pricing page (body.lux.pricing) ===== */
+body.lux.pricing .p-hero{padding:clamp(56px,8vw,100px) 0 clamp(36px,5vw,60px)}
+body.lux.pricing .p-hero-in{grid-template-columns:1fr;gap:0}
+body.lux.pricing .p-hero h1{color:var(--paper);font-size:clamp(44px,6.4vw,88px)}
+body.lux.pricing .p-hero h1 span{color:var(--gold);font-style:italic;font-weight:400}
+body.lux.pricing .p-hero .lede b{color:var(--paper);font-weight:700}
+body.lux.pricing .p-hero-tp{display:none}
+body.lux.pricing .jump a{flex-direction:column;background:transparent;border:1px solid var(--hair);border-radius:3px;box-shadow:none;color:var(--paper);font:600 15px/1.3 var(--sans);padding:14px 20px}
+body.lux.pricing .jump a b{color:var(--gold);font-size:13px}
+body.lux.pricing .jump a:hover{transform:none;box-shadow:none;border-color:var(--gold)}
+body.lux.pricing .promise{background:transparent;border-block:1px solid var(--hair);color:var(--paper)}
+body.lux.pricing .promise-in{padding:30px 24px;gap:28px}
+body.lux.pricing .promise b{font:600 18px var(--serif);color:var(--gold)}
+body.lux.pricing .promise span{font:500 14px var(--sans);color:var(--t45);opacity:1}
+body.lux.pricing .svc{padding:clamp(70px,9vw,130px) 0}
+body.lux.pricing .svc.alt{background:transparent;border-block:0;border-top:1px solid var(--hair)}
+body.lux.pricing .svc h2,body.lux.pricing .pfaq h2{color:var(--paper);font-size:clamp(36px,4.6vw,62px)}
+body.lux.pricing .svc-sub{color:var(--t70)}
+body.lux.pricing .anchor{background:transparent;border:1px solid var(--hair);border-left:2px solid var(--gold);border-radius:0;color:var(--t70);font-weight:500}
+body.lux.pricing .anchor b{color:var(--gold)}
+body.lux.pricing .tier{background:var(--ink-2);border:1px solid var(--hair);border-radius:4px;box-shadow:none;padding:32px 28px 28px}
+body.lux.pricing .svc.alt .tier{background:var(--ink-2)}
+body.lux.pricing .tier.best{border-color:var(--gold);box-shadow:none;transform:none;background:var(--ink-2)!important}
+body.lux.pricing .badge{background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:0;box-shadow:none;font:700 11px var(--sans);letter-spacing:.14em;top:-13px;padding:6px 14px;background-color:var(--ink)}
+body.lux.pricing .tier h3{font:600 26px var(--serif);color:var(--paper)}
+body.lux.pricing .tier-tag{color:var(--t45);font-weight:500}
+body.lux.pricing .tier-price b{font:600 48px var(--serif);color:var(--paper)}
+body.lux.pricing .tier.best .tier-price b{color:var(--gold)}
+body.lux.pricing .tier-price .cur,body.lux.pricing .tier-price small{color:var(--t45);font-weight:600}
+body.lux.pricing .tier-once{color:var(--t45);font-weight:500}
+body.lux.pricing .tier-list li{font-weight:500;font-size:15px;color:var(--t70)}
+body.lux.pricing .tier-list svg{background:transparent;border:1px solid var(--hair);color:var(--gold);border-radius:50%}
+body.lux.pricing .svc-note{color:var(--t45);font-weight:500}
+body.lux.pricing .svc-note a{color:var(--gold);font-weight:700}
+body.lux.pricing .cmp{padding:clamp(70px,9vw,130px) 0;border-top:1px solid var(--hair)}
+body.lux.pricing .cmp h2{color:var(--paper);font-size:clamp(34px,4.2vw,56px)}
+body.lux.pricing .cmp-sub{color:var(--t45)}
+body.lux.pricing .cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:40px}
+body.lux.pricing .cmp-card{background:var(--ink);border:0;border-radius:0;box-shadow:none;padding:30px 28px}
+body.lux.pricing .cmp-card h3{font:600 19px var(--sans);color:var(--t70)}
+body.lux.pricing .cmp-card .cmp-p{font:600 clamp(26px,2.6vw,36px)/1.1 var(--serif);color:var(--paper);margin:12px 0 10px}
+body.lux.pricing .cmp-card .cmp-p small{font:600 13px var(--sans);color:var(--t45)}
+body.lux.pricing .cmp-card ul{color:var(--t45);font-size:14px;padding-left:18px;margin:10px 0}
+body.lux.pricing .cmp-card .src{color:var(--t45);font-size:12.5px}
+body.lux.pricing .cmp-card.best{background:var(--ink-2);box-shadow:inset 0 0 0 1px var(--gold);transform:none;border:0}
+body.lux.pricing .cmp-card.best h3,body.lux.pricing .cmp-card.best .cmp-p{color:var(--gold)}
+body.lux.pricing .apps-line{border-top:1px solid var(--hair);padding:34px 0;color:var(--t45)}
+body.lux.pricing .apps-line a{color:var(--gold);font-weight:700}
+body.lux.pricing .pfaq{padding:clamp(70px,9vw,130px) 0;background:var(--paper);color:#241F1A}
+body.lux.pricing .pfaq h2{color:#241F1A}
+body.lux.pricing .pfaq details{border-bottom:1px solid var(--hair-d);padding:4px 0}
+body.lux.pricing .pfaq summary{cursor:pointer;padding:18px 0;font:600 17px var(--sans)}
+body.lux.pricing .pfaq details p{color:#5B5349;font-size:15.5px;margin:0 0 20px;max-width:640px}
+body.lux.pricing .close{padding:clamp(70px,9vw,130px) 0;border-top:1px solid var(--hair)}
+body.lux.pricing .close h2{color:var(--paper)}
+body.lux.pricing .close-sub{color:var(--t70)}
+@media(max-width:900px){
+  body.lux.pricing .promise-in{grid-template-columns:repeat(2,1fr)}
+  body.lux.pricing .tiers{grid-template-columns:1fr}
+  body.lux.pricing .cmp-grid{grid-template-columns:1fr}
+}
+
+/* lux pages render these fully; placeholders confuse crawlers and captures */
+body.lux .work,body.lux .how,body.lux .close,body.lux .foot{content-visibility:visible;contain-intrinsic-size:none}
+
+/* ===== academies hub (body.lux.acad) ===== */
+body.lux.acad .ac-hero{padding:clamp(56px,8vw,100px) 0 clamp(36px,5vw,64px)}
+body.lux.acad .ac-hero h1{color:var(--paper);font-size:clamp(38px,5.4vw,72px)}
+body.lux.acad .ac-hero h1 em{font-style:italic;color:var(--gold);font-weight:400}
+body.lux.acad .ac-hero .lede{color:var(--t70)}
+body.lux.acad .ac-hero .tag{display:inline-block;font:700 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.16em;color:var(--gold);background:none;border:0;padding:0}
+body.lux.acad .ac-sec{padding:clamp(60px,8vw,110px) 0;border-top:1px solid var(--hair)}
+body.lux.acad .ac-sec h2{color:var(--paper);font-size:clamp(30px,3.8vw,46px)}
+body.lux.acad .ac-sec .sub{color:var(--t45)}
+body.lux.acad .ac-card{background:var(--ink-2);border:1px solid var(--hair);border-radius:4px}
+body.lux.acad .ac-card b{font:600 20px/1.25 var(--serif);color:var(--paper)}
+body.lux.acad .ac-card p{color:var(--t70);font-size:15px}
+body.lux.acad .ac-card .ic{background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:50%;font:400 18px var(--serif);font-style:italic}
+body.lux.acad .ac-steps li{background:var(--ink-2);border:1px solid var(--hair);border-radius:4px;color:var(--t70)}
+body.lux.acad .ac-steps li b{color:var(--paper)}
+body.lux.acad .ac-steps li::before{background:transparent;border:1px solid var(--gold);color:var(--gold);font:400 16px var(--serif);font-style:italic}
+body.lux.acad .ac-offer{background:var(--ink-2);border:1px solid var(--gold);border-radius:6px}
+body.lux.acad .ac-offer .price{font:600 46px/1 var(--serif);color:var(--gold)}
+body.lux.acad .ac-offer .price small{color:var(--t70)}
+body.lux.acad .ac-offer li{background:transparent;border:1px solid var(--hair);border-radius:3px;font-weight:600}
+body.lux.acad .ac-offer li span{color:var(--t45);opacity:1}
+body.lux.acad .ac-list a{border-bottom:1px solid var(--hair);color:var(--paper);font:600 21px/1.3 var(--serif)}
+body.lux.acad .ac-list a span{font:400 15px var(--sans);color:var(--t45)}
+body.lux.acad .ac-list a:hover{color:var(--gold)}
+body.lux.acad .ac-shots{position:relative}
