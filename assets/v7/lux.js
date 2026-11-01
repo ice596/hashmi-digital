@@ -43,7 +43,14 @@
     /* section reveals: quiet opacity with a small rise, batched */
     var below=[].filter.call(els,function(e){return !hero(e)});
     gsap.set(below,{opacity:0,y:18});
-    ScrollTrigger.batch(below,{
+    /* anything already inside the first viewport reveals at once */
+    below.forEach(function(e){
+      if(e.getBoundingClientRect().top<innerHeight*0.88){
+        gsap.to(e,{opacity:1,y:0,duration:.6,ease:'power2.out',overwrite:true});
+        e.classList.add('in');
+      }
+    });
+    ScrollTrigger.batch(below.filter(function(e){return !e.classList.contains('in')}),{
       start:'top 88%',
       once:true,
       onEnter:function(batch){
