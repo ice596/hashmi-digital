@@ -228,14 +228,21 @@
   p.querySelector('.x').onclick=close;
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
 
-  /* gentle teaser, once per visit */
+  /* gentle teaser, once per visit: after 12s or once the hero is scrolled past */
   if(!ss('waSeen')){
-    setTimeout(function(){
+    var teaseShown=false;
+    function showTease(){
+      if(teaseShown)return;teaseShown=true;
+      removeEventListener('scroll',teaseScroll);
       if(p.classList.contains('open')||!btn.classList.contains('in'))return;
       tease=el('div','');tease.id='wa-tease';
       tease.innerHTML='<i aria-label="Dismiss">&times;</i><b>Hashmi Digital</b>Hi! Want a WhatsApp bot like this for your business? Ask me anything.';
       tease.onclick=function(e){if(e.target.tagName==='I'){tease.remove();tease=null;ss('waSeen','1');return}open()};
       document.body.appendChild(tease);requestAnimationFrame(function(){tease.classList.add('in')});
-    },8000);
+      setTimeout(function(){if(tease){tease.classList.remove('in');setTimeout(function(){if(tease){tease.remove();tease=null}},350)}},10000);
+    }
+    function teaseScroll(){if(scrollY>innerHeight*0.95)showTease()}
+    addEventListener('scroll',teaseScroll,{passive:true});
+    setTimeout(showTease,12000);
   } else btn.classList.add('seen');
 })();
