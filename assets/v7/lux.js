@@ -1,6 +1,6 @@
-/* Hashmi Digital lux layer v3: GSAP reveals and scroll moments (gsap-core,
-   gsap-scrolltrigger patterns), ad playback, mobile menu. Falls back to a
-   static page when GSAP is missing or reduced motion is on. */
+/* Hashmi Digital lux layer v4: IO reveals up front; GSAP (gsap-core +
+   gsap-scrolltrigger patterns) loads after window load for scroll moments,
+   so no animation library sits in the critical path. */
 (function(){
   var RM=matchMedia('(prefers-reduced-motion: reduce)').matches||/[?&]nomo/.test(location.search);
 
@@ -30,39 +30,35 @@
     });
   }
 
-  /* hero loops: play only the visible ones; posters are the LCP */
+  /* hero loops: start after first paint settles; poster images carry the LCP */
   if(!RM){
-    document.querySelectorAll('[data-heroloop]').forEach(function(v){
-      if(getComputedStyle(v).display!=='none'){v.play().catch(function(){})}
-    });
+    setTimeout(function(){
+      document.querySelectorAll('[data-heroloop]').forEach(function(v){
+        if(getComputedStyle(v).display!=='none'){v.play().catch(function(){})}
+      });
+    },250);
   }
 
-  /* reveals and scroll moments */
-  var els=document.querySelectorAll('.rv');
+  /* reveals: IntersectionObserver, visible-at-load shows at once */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
   var hero=function(el){return !!el.closest('.hero-lx')};
-  if(!RM&&window.gsap&&window.ScrollTrigger){
-    gsap.registerPlugin(ScrollTrigger);
-
-    /* section reveals: quiet opacity with a small rise, batched */
-    var below=[].filter.call(els,function(e){return !hero(e)});
-    gsap.set(below,{opacity:0,y:18});
-    /* anything already inside the first viewport reveals at once */
+  var below=els.filter(function(e){return !hero(e)});
+  if(RM||!('IntersectionObserver' in window)){
+    els.forEach(function(e){e.classList.add('in')});
+  }else{
     below.forEach(function(e){
-      if(e.getBoundingClientRect().top<innerHeight*0.88){
-        gsap.to(e,{opacity:1,y:0,duration:.6,ease:'power2.out',overwrite:true});
-        e.classList.add('in');
-      }
+      if(e.getBoundingClientRect().top<innerHeight*0.9)e.classList.add('in');
     });
-    ScrollTrigger.batch(below.filter(function(e){return !e.classList.contains('in')}),{
-      start:'top 88%',
-      once:true,
-      onEnter:function(batch){
-        gsap.to(batch,{opacity:1,y:0,duration:.8,stagger:.08,ease:'power2.out',overwrite:true,
-          onComplete:function(){batch.forEach(function(b){b.classList.add('in')})}});
-      }
-    });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    below.forEach(function(e){if(!e.classList.contains('in'))io.observe(e)});
+  }
 
-    /* signature word scrubs with the scroll */
+  /* GSAP scroll moments, loaded after the page is done */
+  function initGsap(){
+    if(!window.gsap||!window.ScrollTrigger)return;
+    gsap.registerPlugin(ScrollTrigger);
     var sig=document.querySelector('.sig-word');
     if(sig){
       gsap.fromTo(sig,{opacity:.1,scale:.94,letterSpacing:'0.06em'},{
@@ -70,26 +66,22 @@
         scrollTrigger:{trigger:'.sig-band',start:'top 90%',end:'center 55%',scrub:true}
       });
     }
-
-    /* gentle parallax on section backdrop stills, desktop only */
     gsap.matchMedia().add('(min-width: 1021px)',function(){
       document.querySelectorAll('.bd>.bd-img').forEach(function(img){
-        gsap.fromTo(img,{yPercent:-6},{yPercent:6,ease:'none',
+        gsap.fromTo(img,{yPercent:-5},{yPercent:5,ease:'none',
           scrollTrigger:{trigger:img.parentElement,start:'top bottom',end:'bottom top',scrub:true}});
       });
     });
-  }else{
-    document.documentElement.classList.add('no-gsap');
-    if(!RM&&'IntersectionObserver' in window){
-      var io=new IntersectionObserver(function(es){
-        es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
-      },{threshold:.12});
-      els.forEach(function(e){if(!hero(e))io.observe(e)});
-    }else{
-      els.forEach(function(e){e.classList.add('in')});
-    }
   }
-  if(RM){els.forEach(function(e){e.classList.add('in')})}
+  function loadScript(src,cb){var sc=document.createElement('script');sc.src=src;sc.onload=cb;document.head.appendChild(sc)}
+  if(!RM&&(document.querySelector('.sig-word')||document.querySelector('.bd'))){
+    var boot=function(){
+      loadScript('/assets/vendor/gsap/gsap.min.js',function(){
+        loadScript('/assets/vendor/gsap/ScrollTrigger.min.js',initGsap);
+      });
+    };
+    if(document.readyState==='complete'){boot()}else{addEventListener('load',boot)}
+  }
 
   /* ad cards: tap to play with sound, one at a time */
   var cards=[].slice.call(document.querySelectorAll('.adc'));

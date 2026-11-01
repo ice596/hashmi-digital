@@ -15,6 +15,7 @@
 <link rel="preload" href="/assets/v7/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/v7/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/v7/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/ads/hashmi-salon-poster.jpg" as="image" fetchpriority="high">
 <link rel="preload" href="/assets/ads/hero-gold-port.jpg" as="image" fetchpriority="high" media="(max-width:1020px)">
 <link rel="preload" href="/assets/ads/hero-gold-land.jpg" as="image" fetchpriority="high" media="(min-width:1021px)">
 <link rel="stylesheet" href="/assets/v7/site.css?v=21">
@@ -52,8 +53,9 @@
 <!-- 1. HERO: the ad plays behind everything -->
 <section class="hero-lx" aria-labelledby="h1">
   <div class="hero-media" aria-hidden="true">
-    <video class="hm-port" data-heroloop muted loop playsinline preload="none" poster="/assets/ads/hero-gold-port.jpg" src="/assets/ads/hero-gold-port.mp4"></video>
-    <video class="hm-land" data-heroloop muted loop playsinline preload="none" poster="/assets/ads/hero-gold-land.jpg" src="/assets/ads/hero-gold-land.mp4"></video>
+    <picture><source media="(min-width:1021px)" srcset="/assets/ads/hero-gold-land.jpg"><img src="/assets/ads/hero-gold-port.jpg" alt="" fetchpriority="high" decoding="async"></picture>
+    <video class="hm-port" data-heroloop muted loop playsinline preload="none" src="/assets/ads/hero-gold-port.mp4"></video>
+    <video class="hm-land" data-heroloop muted loop playsinline preload="none" src="/assets/ads/hero-gold-land.mp4"></video>
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap hero-grid">
@@ -62,7 +64,8 @@
       <h1 id="h1" class="rv rv2">More customers.<br>More bookings.<br><em>One system.</em></h1>
       <div class="hero-phone rv rv3">
         <div class="vid-phone slim">
-          <video data-heroloop muted loop playsinline preload="none" poster="/assets/ads/hashmi-salon-poster.jpg" src="/assets/ads/hashmi-salon.mp4" aria-label="Sample AI salon ad made by Hashmi Digital, playing"></video>
+          <img class="ph-poster" src="/assets/ads/hashmi-salon-poster.jpg" alt="" fetchpriority="high" decoding="async">
+          <video data-heroloop muted loop playsinline preload="none" src="/assets/ads/hashmi-salon.mp4" aria-label="Sample AI salon ad made by Hashmi Digital, playing"></video>
           <span class="vid-tag">Sample ad, made with AI by us</span>
         </div>
       </div>
@@ -104,15 +107,15 @@
       <p class="rv rv3">Nobody scrolls past video. Every ad below is a sample we made for an imaginary business in your niche. Yours looks like this, with your shop in it.</p>
     </div>
     <div class="ads-grid">
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-salon-poster.jpg" src="/assets/ads/hashmi-salon.mp4" aria-label="Sample AI ad for a salon"></video><button class="play" type="button" aria-label="Play the salon sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Salon</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-academy-poster.jpg" src="/assets/ads/hashmi-academy.mp4" aria-label="Sample AI ad for a kids sports academy"></video><button class="play" type="button" aria-label="Play the academy sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Kids academy</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-gym-poster.jpg" src="/assets/ads/hashmi-gym.mp4" aria-label="Sample AI ad for a gym"></video><button class="play" type="button" aria-label="Play the gym sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Gym</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-perfume-poster.jpg" src="/assets/ads/hashmi-perfume.mp4" aria-label="Sample AI ad for a perfume and oud shop"></video><button class="play" type="button" aria-label="Play the perfume sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Perfume and oud</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-carwash-poster.jpg" src="/assets/ads/hashmi-carwash.mp4" aria-label="Sample AI ad for a car wash"></video><button class="play" type="button" aria-label="Play the car wash sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Car wash</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-karak-poster.jpg" src="/assets/ads/hashmi-karak.mp4" aria-label="Sample AI ad for a karak cafe"></video><button class="play" type="button" aria-label="Play the karak cafe sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Karak café</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-burger-poster.jpg" src="/assets/ads/hashmi-burger.mp4" aria-label="Sample AI ad for a burger restaurant"></video><button class="play" type="button" aria-label="Play the burger sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Burger joint</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-kunafa-poster.jpg" src="/assets/ads/hashmi-kunafa.mp4" aria-label="Sample AI ad for a kunafa dessert shop"></video><button class="play" type="button" aria-label="Play the kunafa sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Kunafa shop</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-smashlab-poster.jpg" src="/assets/ads/hashmi-smashlab.mp4" aria-label="Sample AI ad for a padel club"></video><button class="play" type="button" aria-label="Play the padel club sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Padel club</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><img class="adc-poster" loading="lazy" src="/assets/ads/hashmi-salon-poster.jpg" alt="" aria-hidden="true"><video preload="none" playsinline src="/assets/ads/hashmi-salon.mp4" aria-label="Sample AI ad for a salon"</video><button class="play" type="button" aria-label="Play the salon sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Salon</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><img class="adc-poster" loading="lazy" src="/assets/ads/hashmi-academy-poster.jpg" alt="" aria-hidden="true"><video preload="none" playsinline src="/assets/ads/hashmi-academy.mp4" aria-label="Sample AI ad for a kids sports academy"</video><button class="play" type="button" aria-label="Play the academy sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Kids academy</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><img class="adc-poster" loading="lazy" src="/assets/ads/hashmi-gym-poster.jpg" alt="" aria-hidden="true"><video preload="none" playsinline src="/assets/ads/hashmi-gym.mp4" aria-label="Sample AI ad for a gym"</video><button class="play" type="button" aria-label="Play the gym sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Gym</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><img class="adc-poster" loading="lazy" src="/assets/ads/hashmi-perfume-poster.jpg" alt="" aria-hidden="true"><video preload="none" playsinline src="/assets/ads/hashmi-perfume.mp4" aria-label="Sample AI ad for a perfume and oud shop"</video><button class="play" type="button" aria-label="Play the perfume sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Perfume and oud</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><img class="adc-poster" loading="lazy" src="/assets/ads/hashmi-carwash-poster.jpg" alt="" aria-hidden="true"><video preload="none" playsinline src="/assets/ads/hashmi-carwash.mp4" aria-label="Sample AI ad for a car wash"</video><button class="play" type="button" aria-label="Play the car wash sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Car wash</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><img class="adc-poster" loading="lazy" src="/assets/ads/hashmi-karak-poster.jpg" alt="" aria-hidden="true"><video preload="none" playsinline src="/assets/ads/hashmi-karak.mp4" aria-label="Sample AI ad for a karak cafe"</video><button class="play" type="button" aria-label="Play the karak cafe sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Karak café</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><img class="adc-poster" loading="lazy" src="/assets/ads/hashmi-burger-poster.jpg" alt="" aria-hidden="true"><video preload="none" playsinline src="/assets/ads/hashmi-burger.mp4" aria-label="Sample AI ad for a burger restaurant"</video><button class="play" type="button" aria-label="Play the burger sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Burger joint</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><img class="adc-poster" loading="lazy" src="/assets/ads/hashmi-kunafa-poster.jpg" alt="" aria-hidden="true"><video preload="none" playsinline src="/assets/ads/hashmi-kunafa.mp4" aria-label="Sample AI ad for a kunafa dessert shop"</video><button class="play" type="button" aria-label="Play the kunafa sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Kunafa shop</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><img class="adc-poster" loading="lazy" src="/assets/ads/hashmi-smashlab-poster.jpg" alt="" aria-hidden="true"><video preload="none" playsinline src="/assets/ads/hashmi-smashlab.mp4" aria-label="Sample AI ad for a padel club"</video><button class="play" type="button" aria-label="Play the padel club sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Padel club</b><span>Sample ad</span></figcaption></figure>
     </div>
     <p class="ads-note rv">Every video on this page is a sample made by us to show the style. No client work is shown, and no real businesses are featured. A single ad like these is AED 750, or from AED 400 a month on a plan.</p>
     <div class="ask-band rv">
@@ -124,7 +127,7 @@
 
 <!-- 4. BOT DEMO -->
 <section class="sec hairline-t bd" id="bot" aria-labelledby="bt">
-  <div class="bd-img" style="background-image:url(/assets/ads/stills/salon.jpg)" aria-hidden="true"></div>
+  <img class="bd-img" loading="lazy" src="/assets/ads/stills/salon.jpg" alt="" aria-hidden="true">
   <div class="bd-veil" aria-hidden="true"></div>
   <div class="wrap bot-grid">
     <div class="rv">
@@ -227,7 +230,7 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
 
 <!-- comparison (dark, karak backdrop) -->
 <section class="sec bd" aria-labelledby="cmt">
-  <div class="bd-img strong" style="background-image:url(/assets/ads/stills/gen-city.jpg)" aria-hidden="true"></div>
+  <img class="bd-img strong" loading="lazy" src="/assets/ads/stills/gen-city.jpg" alt="" aria-hidden="true">
   <div class="bd-veil" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
@@ -267,7 +270,7 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
 
 <!-- 8. FOUNDING CLIENTS (perfume backdrop) -->
 <section class="sec bd" aria-labelledby="fc">
-  <div class="bd-img strong" style="background-image:url(/assets/ads/stills/gen-silk.jpg)" aria-hidden="true"></div>
+  <img class="bd-img strong" loading="lazy" src="/assets/ads/stills/gen-silk.jpg" alt="" aria-hidden="true">
   <div class="bd-veil" aria-hidden="true"></div>
   <div class="wrap found-lx">
     <span class="cap rv">Founding clients, three spots</span>
@@ -299,7 +302,7 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
 
 <!-- 10. CLOSE (smashlab backdrop) -->
 <section class="sec hairline-t close-lx bd" id="start" aria-labelledby="ct">
-  <div class="bd-img strong" style="background-image:url(/assets/ads/stills/gen-gold.jpg)" aria-hidden="true"></div>
+  <img class="bd-img strong" loading="lazy" src="/assets/ads/stills/gen-gold.jpg" alt="" aria-hidden="true">
   <div class="bd-veil" aria-hidden="true"></div>
   <div class="wrap">
     <span class="cap rv">One photo. 24 hours.</span>
@@ -338,8 +341,6 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
 </footer>
 
 <script src="/assets/v7/site.js?v=5" defer></script>
-<script src="/assets/vendor/gsap/gsap.min.js" defer></script>
-<script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
 <script src="/assets/v7/lux.js?v=3" defer></script>
 <script src="/assets/v7/wa.js?v=12" defer></script>
 </body>

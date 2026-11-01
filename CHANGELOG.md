@@ -44,3 +44,9 @@ All work per DESIGN.md (Buzzworthy structure + Nobu mood) and UPGRADE-PLAN.md. F
 - GSAP 3.12.5 self-hosted (gsap-core + gsap-scrolltrigger patterns): batched reveals, scrubbed signature word, desktop-only backdrop parallax via matchMedia, static fallback without GSAP, reduced-motion safe.
 - Fixed: menu overlay covered its own close button (z-index), light-section headings cream-on-cream (specificity).
 - Pricing, academies, ads untouched this pass apart from compat styles. Not shipped.
+
+## 2026-11-01, pricing pass + performance work
+- Pricing restyled to the approved v3 language: hd-mark header with the full-screen mobile menu (pricing had no mobile nav at all before), sentence-case serif headings, italic captions, the brand gold loop behind the hero, duplicate comparison subtitle removed. All prices and links byte-identical.
+- Performance work after the video hero dropped scores: poster underlay images carry the LCP, 9 ad-card posters and section stills now lazy images (saves about 700KB on first load), Amiri cut from the critical chain (Arabic footer line uses system serif), GSAP loads after window load, lux.css minified, salon poster recompressed.
+- Fixed in passing: phone video background covered its poster.
+- Lighthouse mobile now: home 87-88 perf / 97 a11y, pricing 90-92 / 100. Observed LCP is 0.2-0.3s; the simulated score is the cost of the cinematic video-first hero on a throttled modem.

@@ -15,6 +15,7 @@
 <link rel="preload" href="/assets/v7/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/v7/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/v7/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/ads/hero-gold-land.jpg" as="image" fetchpriority="high">
 <link rel="stylesheet" href="/assets/v7/site.css?v=21">
 <link rel="stylesheet" href="/assets/v7/pricing.css?v=4">
 <link rel="stylesheet" href="/assets/v7/lux.css?v=3">
@@ -25,22 +26,34 @@
 
 <header class="top" id="top">
   <div class="wrap top-in">
-    <a class="logo" href="/" aria-label="Hashmi Digital home">hashmi digital</a>
+    <a class="logo" href="/" aria-label="Hashmi Digital home"><img src="/assets/v7/img/hd-mark.png" alt="" width="26" height="26">hashmi digital</a>
     <nav class="top-nav" aria-label="Main">
-      <a href="/#build">What we build</a>
+      <a href="/#ads">Sample ads</a>
       <a href="/#work">Our work</a>
       <a href="/academies/">For academies</a>
       <a href="/pricing/" aria-current="page">Prices</a>
     </nav>
-    <a class="btn btn-sm" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%27m%20not%20sure%20which%20package%20fits.%20My%20business%20is%3A%20" target="_blank" rel="noopener"><span class="hide-s">Help me choose</span><span class="show-s">Ask us</span></a>
+    <a class="btn btn-sm" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%27m%20not%20sure%20which%20package%20fits.%20My%20business%20is%3A%20" target="_blank" rel="noopener">Help me choose</a>
+    <button class="mnav-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
   </div>
+  <nav class="mnav" id="mnav" hidden aria-label="Mobile">
+    <a href="/#ads">Sample ads</a>
+    <a href="/#work">Our work</a>
+    <a href="/academies/">For academies</a>
+    <a href="/pricing/">Prices</a>
+    <a class="mnav-cta" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%27m%20not%20sure%20which%20package%20fits.%20My%20business%20is%3A%20" target="_blank" rel="noopener">Help me choose</a>
+    <p class="mnav-note">An AI studio in Abu Dhabi</p>
+  </nav>
 </header>
 
 <main id="main">
-<section class="p-hero" aria-labelledby="h1">
+<section class="p-hero bd" aria-labelledby="h1">
+  <div class="bd-vid" aria-hidden="true"><img src="/assets/ads/hero-gold-land.jpg" alt="" fetchpriority="high" decoding="async"><video data-heroloop muted loop playsinline preload="none" src="/assets/ads/hero-gold-land.mp4"></video></div>
+  <div class="bd-veil" aria-hidden="true"></div>
   <div class="wrap p-hero-in">
     <div class="p-hero-copy">
-      <h1 id="h1">one system. <span>two parts.</span></h1>
+      <span class="cap" style="margin-bottom:16px">Every price public, every price fixed</span>
+      <h1 id="h1">One system. <span>Two parts.</span></h1>
       <p class="lede"><b>Get booked</b> brings customers in. <b>Get seen</b> keeps them coming. Every price is fixed, and you try a free prototype before you pay.</p>
       <nav class="jump" aria-label="Jump to a part">
         <a href="#booked">1. Get booked <b>from AED 2,900</b></a>
@@ -63,7 +76,7 @@
 <section class="svc" id="booked" aria-labelledby="h-booked">
   <div class="wrap">
     <div class="svc-head">
-      <h2 id="h-booked">1. get booked.</h2>
+      <h2 id="h-booked">Get booked.</h2>
       <p class="svc-sub">Customers find you on Google, message you, and get booked in, even at 11 pm. A website and a WhatsApp assistant that work together.</p>
       <p class="anchor">Bought separately from UAE agencies, a site and a booking bot usually cost <b>AED 7,000 to 15,000</b>.</p>
     </div>
@@ -103,7 +116,7 @@
 <section class="svc alt" id="seen" aria-labelledby="h-seen">
   <div class="wrap">
     <div class="svc-head">
-      <h2 id="h-seen">2. get seen.</h2>
+      <h2 id="h-seen">Get seen.</h2>
       <p class="svc-sub">Fresh AI video ads and post ideas every month, so people see you, remember you and come back.</p>
       <p class="anchor">Same work as a marketing hire, <b>for a fraction of the cost</b>. See the comparison below.</p>
     </div>
@@ -141,8 +154,8 @@
 </section>
 <section class="cmp" id="compare" aria-labelledby="h-cmp">
   <div class="wrap">
-    <h2 id="h-cmp" class="center">what a month of marketing costs.</h2>
-    <p class="center cmp-sub">The same job, three ways. Prices are typical for the UAE in 2026.</p>
+    <h2 id="h-cmp" class="center">The same job, <em>three ways.</em></h2>
+    <p class="center cmp-sub">Prices are typical for the UAE in 2026.</p>
     <div class="cmp-grid">
       <div class="cmp-card"><h3>Hire a marketer</h3><p class="cmp-p">AED 8,000+<small>/mo</small></p><ul><li>Salary starts around AED 8,000 a month in Abu Dhabi</li><li>Plus visa, insurance, phone and software</li><li>One person, sick days and holidays</li></ul><a class="src" href="https://rfsonshr.com/salary-guide/marketing/" target="_blank" rel="noopener">(RFS HR salary guide)</a></div>
       <div class="cmp-card"><h3>Marketing agency</h3><p class="cmp-p">AED 2,500 to 5,000<small>/mo</small></p><ul><li>Usually 8 to 20 posts a month</li><li>Few or no videos at the lower price</li><li>Often a 3 to 6 month contract</li></ul><span class="src">(packages from Abu Dhabi and Dubai agencies)</span></div>
@@ -157,7 +170,7 @@
 
 <section class="pfaq" aria-labelledby="h-faq">
   <div class="wrap pfaq-in">
-    <h2 id="h-faq">questions about price.</h2>
+    <h2 id="h-faq">Questions <em>about price.</em></h2>
     <details><summary>Why are you cheaper than big agencies?</summary><p>We use AI to do the slow parts, like drafting designs, writing first versions and making videos, and a person checks every piece before you see it. No big office, no account managers. You get agency quality for a fraction of the price, and you talk to the person building it.</p></details>
     <details><summary>Can I start small and upgrade later?</summary><p>Yes. Start with Get booked Starter, and when you're ready to move up, you only pay the difference. Add Get seen any month.</p></details>
     <details><summary>When do I pay?</summary><p>Get booked: 50% to start and 50% at launch. Get seen: paid monthly in advance, cancel anytime. The prototype is free.</p></details>
@@ -169,7 +182,7 @@
 
 <section class="close" id="start" aria-labelledby="ct">
   <div class="wrap close-in">
-    <h2 id="ct" class="center">not sure? ask us.</h2>
+    <h2 id="ct" class="center">Not sure? <em>Ask us.</em></h2>
     <p class="center close-sub">One WhatsApp. We'll point you to the right package, and it's often the smaller one.</p>
     <div class="close-cta">
       <a class="btn btn-xl" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%27m%20not%20sure%20which%20package%20fits.%20My%20business%20is%3A%20" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 10 10.1 5.3 16 5.3S26.7 10 26.7 15.8 21.9 26.4 16 26.4z"/></svg>Help me choose</a>
@@ -189,6 +202,7 @@
 </footer>
 
 <script src="/assets/v7/site.js?v=5" defer></script>
+<script src="/assets/v7/lux.js?v=3" defer></script>
 <script src="/assets/v7/wa.js?v=12" defer></script>
 </body>
 </html>
