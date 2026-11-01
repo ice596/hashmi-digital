@@ -50,3 +50,11 @@ All work per DESIGN.md (Buzzworthy structure + Nobu mood) and UPGRADE-PLAN.md. F
 - Performance work after the video hero dropped scores: poster underlay images carry the LCP, 9 ad-card posters and section stills now lazy images (saves about 700KB on first load), Amiri cut from the critical chain (Arabic footer line uses system serif), GSAP loads after window load, lux.css minified, salon poster recompressed.
 - Fixed in passing: phone video background covered its poster.
 - Lighthouse mobile now: home 87-88 perf / 97 a11y, pricing 90-92 / 100. Observed LCP is 0.2-0.3s; the simulated score is the cost of the cinematic video-first hero on a throttled modem.
+
+## 2026-11-01, polish pass and ship
+- Apple Watch system (dark): gold radial glow behind hero and bot phones, media cards rounded to 10-16px with surface-step borders.
+- Origin system (type): display weight 340 with tighter leading, body on dark to quiet ash, captions to 14px with more air.
+- Superhuman system (light): cards and bands rounded to 14px, warm stone secondary text, tighter light-section heading tracking. Buttons softened to 8px radius everywhere.
+- wa.js teaser: shows only after 12 seconds or after scrolling past the hero, auto-dismisses after 10 seconds, chat button always visible.
+- Checks passed: zero console errors, all links and prices verified, no em dashes, 16 sample labels intact, Lighthouse home 87/97 pricing 89/100 (not worse than before the pass).
+- SHIPPED: site.zip rebuilt (21MB, 260 files) with added exclusions for .git, .github, the old zips, and the working docs, which the original command would have packed into the live site. Pushed to main, Deploy site action succeeded in 29s, hashmi-digital.com verified serving the new hero and pricing.
