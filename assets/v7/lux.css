@@ -327,7 +327,7 @@ body.lux .foot p.foot-base{border-top:1px solid var(--hair);padding:20px 0 30px;
   .strip-lx li{padding:4px 13px;font-size:13.5px}
 }
 
-/* ===== pricing page (body.lux.pricing) — not yet redesigned, kept stable ===== */
+/* ===== pricing page (body.lux.pricing) not yet redesigned, kept stable ===== */
 body.lux.pricing .top{position:sticky;background:rgba(20,18,16,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 body.lux.pricing .p-hero{padding:clamp(56px,8vw,100px) 0 clamp(36px,5vw,60px)}
 body.lux.pricing .p-hero-in{grid-template-columns:1fr;gap:0}
