@@ -15,7 +15,8 @@
 <link rel="preload" href="/assets/v7/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/v7/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/v7/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/ads/hero-poster.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="/assets/ads/hero-gold-port.jpg" as="image" fetchpriority="high" media="(max-width:1020px)">
+<link rel="preload" href="/assets/ads/hero-gold-land.jpg" as="image" fetchpriority="high" media="(min-width:1021px)">
 <link rel="stylesheet" href="/assets/v7/site.css?v=21">
 <link rel="stylesheet" href="/assets/v7/lux.css?v=3">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Hashmi Digital","url":"https://hashmi-digital.com/","logo":"https://hashmi-digital.com/assets/img/og.png","image":"https://hashmi-digital.com/assets/img/og.png","email":"hello@hashmi-digital.com","telephone":"+971501351630","priceRange":"AED","knowsLanguage":["en","ar"],"areaServed":["Abu Dhabi","Dubai","United Arab Emirates"],"address":{"@type":"PostalAddress","addressLocality":"Abu Dhabi","addressCountry":"AE"},"founder":{"@type":"Person","name":"Ali Al Hashmi"},"description":"Websites, WhatsApp booking and AI video ads for salons, academies, gyms, car washes, perfume shops and cafes in Abu Dhabi. Free ad from one photo within 24 hours.","hasOfferCatalog":{"@type":"OfferCatalog","name":"Services","itemListElement":[{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","minPrice":2900,"priceCurrency":"AED"},"itemOffered":{"@type":"Service","name":"Get booked","description":"A website plus a WhatsApp booking assistant that answers and books customers 24/7."}},{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","minPrice":400,"priceCurrency":"AED"},"itemOffered":{"@type":"Service","name":"Get seen","description":"Monthly AI video ads and post ideas."}},{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","minPrice":7500,"priceCurrency":"AED"},"itemOffered":{"@type":"Service","name":"Custom mobile app","description":"Your own iPhone and Android app for ordering, booking and loyalty."}}]}}</script>
@@ -51,13 +52,20 @@
 <!-- 1. HERO: the ad plays behind everything -->
 <section class="hero-lx" aria-labelledby="h1">
   <div class="hero-media" aria-hidden="true">
-    <video data-heroloop muted loop playsinline preload="none" poster="/assets/ads/hero-poster.jpg" src="/assets/ads/hero-loop.mp4"></video>
+    <video class="hm-port" data-heroloop muted loop playsinline preload="none" poster="/assets/ads/hero-gold-port.jpg" src="/assets/ads/hero-gold-port.mp4"></video>
+    <video class="hm-land" data-heroloop muted loop playsinline preload="none" poster="/assets/ads/hero-gold-land.jpg" src="/assets/ads/hero-gold-land.mp4"></video>
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy-lx">
       <span class="cap rv">An AI studio in Abu Dhabi</span>
       <h1 id="h1" class="rv rv2">More customers.<br>More bookings.<br><em>One system.</em></h1>
+      <div class="hero-phone rv rv3">
+        <div class="vid-phone slim">
+          <video data-heroloop muted loop playsinline preload="none" poster="/assets/ads/hashmi-salon-poster.jpg" src="/assets/ads/hashmi-salon.mp4" aria-label="Sample AI salon ad made by Hashmi Digital, playing"></video>
+          <span class="vid-tag">Sample ad, made with AI by us</span>
+        </div>
+      </div>
       <p class="lede rv rv3">Websites, WhatsApp booking and AI video ads for local businesses in the UAE.</p>
       <p class="hero-hook rv rv3">Send us one photo. Receive a free ad within 24 hours. No card, and you keep it either way.</p>
       <div class="hero-ctas rv rv4">
@@ -71,7 +79,6 @@
       </ul>
     </div>
   </div>
-  <span class="hero-sample">A sample ad, made with AI by us</span>
 </section>
 
 <!-- 2. WHO IT'S FOR -->

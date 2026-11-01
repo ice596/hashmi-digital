@@ -30,9 +30,12 @@
     });
   }
 
-  /* hero loop: start fetching and playing once JS is up; poster is the LCP */
-  var hv=document.querySelector('[data-heroloop]');
-  if(hv&&!RM){hv.play().catch(function(){})}
+  /* hero loops: play only the visible ones; posters are the LCP */
+  if(!RM){
+    document.querySelectorAll('[data-heroloop]').forEach(function(v){
+      if(getComputedStyle(v).display!=='none'){v.play().catch(function(){})}
+    });
+  }
 
   /* reveals and scroll moments */
   var els=document.querySelectorAll('.rv');
