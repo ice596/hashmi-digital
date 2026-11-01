@@ -35,3 +35,12 @@ All work per DESIGN.md (Buzzworthy structure + Nobu mood) and UPGRADE-PLAN.md. F
 ### Not done / later
 - site.zip not rebuilt, nothing on main, nothing deployed (awaiting "ship it").
 - Old /assets/v7/vid kept (used by /ads/ landscape samples).
+
+## 2026-11-01, second pass: design quality (homepage only)
+- Teardown vs buzzworthystudio.com (design-teardown skill, measured from live DOM): our 23 type sizes vs their 11, 23 surfaces vs 4, 19 text colors vs 5, 13 border values vs 1, weights 600/700 dominant vs their 400, no media in the mobile first screen vs their full canvas. Cascade bug found: both hero buttons rendered solid orange.
+- lux.css rewritten (v3): weight 395 serif display in sentence case, italic gold serif captions replace caps eyebrows (frontend-design: caps-tracked labels, one-gold-word headlines, middle dots and arrow links are AI tells and were removed), 4 text roles, 2 dark surfaces, 1 hairline, film grain overlay, slim fixed transparent header with hd mark, slim buttons (one orange per screen, gold outline secondary, underlined tertiary), full-screen serif mobile menu.
+- Hero: full-bleed real ad video at 390 (headline over video), split-bleed at 1440. CSS-only entrance; poster is the LCP.
+- Depth: real-ad stills (salon, karak, perfume, smashlab) as parallax backdrops with veils; grain everywhere.
+- GSAP 3.12.5 self-hosted (gsap-core + gsap-scrolltrigger patterns): batched reveals, scrubbed signature word, desktop-only backdrop parallax via matchMedia, static fallback without GSAP, reduced-motion safe.
+- Fixed: menu overlay covered its own close button (z-index), light-section headings cream-on-cream (specificity).
+- Pricing, academies, ads untouched this pass apart from compat styles. Not shipped.

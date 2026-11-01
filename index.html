@@ -17,7 +17,7 @@
 <link rel="preload" href="/assets/v7/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/ads/hero-poster.jpg" as="image" fetchpriority="high">
 <link rel="stylesheet" href="/assets/v7/site.css?v=21">
-<link rel="stylesheet" href="/assets/v7/lux.css?v=2">
+<link rel="stylesheet" href="/assets/v7/lux.css?v=3">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Hashmi Digital","url":"https://hashmi-digital.com/","logo":"https://hashmi-digital.com/assets/img/og.png","image":"https://hashmi-digital.com/assets/img/og.png","email":"hello@hashmi-digital.com","telephone":"+971501351630","priceRange":"AED","knowsLanguage":["en","ar"],"areaServed":["Abu Dhabi","Dubai","United Arab Emirates"],"address":{"@type":"PostalAddress","addressLocality":"Abu Dhabi","addressCountry":"AE"},"founder":{"@type":"Person","name":"Ali Al Hashmi"},"description":"Websites, WhatsApp booking and AI video ads for salons, academies, gyms, car washes, perfume shops and cafes in Abu Dhabi. Free ad from one photo within 24 hours.","hasOfferCatalog":{"@type":"OfferCatalog","name":"Services","itemListElement":[{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","minPrice":2900,"priceCurrency":"AED"},"itemOffered":{"@type":"Service","name":"Get booked","description":"A website plus a WhatsApp booking assistant that answers and books customers 24/7."}},{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","minPrice":400,"priceCurrency":"AED"},"itemOffered":{"@type":"Service","name":"Get seen","description":"Monthly AI video ads and post ideas."}},{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","minPrice":7500,"priceCurrency":"AED"},"itemOffered":{"@type":"Service","name":"Custom mobile app","description":"Your own iPhone and Android app for ordering, booking and loyalty."}}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the free ad really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Send us one photo of your shop or product on WhatsApp. Within 24 hours you receive a short AI video ad, free. No card, no sign-up. If you like it, we talk. If not, keep it anyway."}},{"@type":"Question","name":"Who actually builds my website and ads?","acceptedAnswer":{"@type":"Answer","text":"Ali Al Hashmi, a one-person AI studio in Abu Dhabi. You talk to the person building it. Ali also built Earned, an iPhone app live on the App Store."}},{"@type":"Question","name":"Do you use AI?","acceptedAnswer":{"@type":"Answer","text":"Yes. AI does the slow parts, like drafting designs and making videos, and a person checks every piece before you see it. That is why the prices are a fraction of agency prices."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"Get booked, a website plus WhatsApp booking, is a one-time AED 2,900, 4,900 or 7,900. Get seen, monthly AI video ads and post ideas, is AED 400, 1,900 or 3,500 a month. Cancel monthly plans anytime."}},{"@type":"Question","name":"Are the businesses on this site real clients?","acceptedAnswer":{"@type":"Answer","text":"Not yet, and we say so. Every ad and demo here is a sample we built to show the quality. We are taking our first 3 founding clients now. They lock launch prices for 12 months in return for a case study."}}]}</script>
 </head>
@@ -26,30 +26,43 @@
 
 <header class="top" id="top">
   <div class="wrap top-in">
-    <a class="logo" href="/" aria-label="Hashmi Digital home">hashmi digital</a>
+    <a class="logo" href="/" aria-label="Hashmi Digital home"><img src="/assets/v7/img/hd-mark.png" alt="" width="26" height="26">hashmi digital</a>
     <nav class="top-nav" aria-label="Main">
       <a href="#ads">Sample ads</a>
       <a href="#work">Our work</a>
       <a href="/academies/">For academies</a>
       <a href="/pricing/">Prices</a>
     </nav>
-    <a class="btn btn-sm" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%20want%20the%20free%20ad.%20My%20business%20is%3A%20" target="_blank" rel="noopener" data-cta="header-free-ad"><span class="hide-s">Get my free ad</span><span class="show-s">Free ad</span></a>
+    <a class="btn btn-sm" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%20want%20the%20free%20ad.%20My%20business%20is%3A%20" target="_blank" rel="noopener" data-cta="header-free-ad">Free ad</a>
+    <button class="mnav-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
   </div>
+  <nav class="mnav" id="mnav" hidden aria-label="Mobile">
+    <a href="#ads">Sample ads</a>
+    <a href="#work">Our work</a>
+    <a href="/academies/">For academies</a>
+    <a href="/pricing/">Prices</a>
+    <a class="mnav-cta" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%20want%20the%20free%20ad.%20My%20business%20is%3A%20" target="_blank" rel="noopener" data-cta="menu-free-ad">Get my free ad</a>
+    <p class="mnav-note">An AI studio in Abu Dhabi</p>
+  </nav>
 </header>
 
 <main id="main">
 
-<!-- 1. HERO: the product plays, one ask -->
+<!-- 1. HERO: the ad plays behind everything -->
 <section class="hero-lx" aria-labelledby="h1">
+  <div class="hero-media" aria-hidden="true">
+    <video data-heroloop muted loop playsinline preload="none" poster="/assets/ads/hero-poster.jpg" src="/assets/ads/hero-loop.mp4"></video>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy-lx">
-      <span class="meta rv">AI studio · Abu Dhabi</span>
-      <h1 id="h1" class="rv rv2">more customers.<br>more <span class="gi">bookings.</span><br>one system.</h1>
-      <p class="lede rv rv3">Websites, WhatsApp booking and AI video ads for local businesses in the UAE. We get you found, answer your messages and fill your calendar.</p>
-      <p class="hero-hook rv rv3"><b>Send us one photo. Receive a free ad within 24 hours.</b> No card, no sign-up. Keep it either way.</p>
+      <span class="cap rv">An AI studio in Abu Dhabi</span>
+      <h1 id="h1" class="rv rv2">More customers.<br>More bookings.<br><em>One system.</em></h1>
+      <p class="lede rv rv3">Websites, WhatsApp booking and AI video ads for local businesses in the UAE.</p>
+      <p class="hero-hook rv rv3">Send us one photo. Receive a free ad within 24 hours. No card, and you keep it either way.</p>
       <div class="hero-ctas rv rv4">
         <a class="btn btn-xl" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%20want%20the%20free%20ad.%20My%20business%20is%3A%20" target="_blank" rel="noopener" data-cta="hero-free-ad"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 10 10.1 5.3 16 5.3S26.7 10 26.7 15.8 21.9 26.4 16 26.4z"/></svg>Claim my free ad</a>
-        <a class="btn btn-xl btn-2" href="#ads" data-cta="hero-see-ads">See the ads</a>
+        <a class="link" href="#ads" data-cta="hero-see-ads">See the sample ads</a>
       </div>
       <ul class="hero-meta rv rv4">
         <li>Fixed prices</li>
@@ -57,24 +70,19 @@
         <li>Arabic and English</li>
       </ul>
     </div>
-    <div class="rv rv3">
-      <div class="vid-phone">
-        <video data-heroloop muted loop playsinline preload="none" poster="/assets/ads/hero-poster.jpg" aria-label="Sample AI video ad for a salon, made by Hashmi Digital" src="/assets/ads/hero-loop.mp4"></video>
-        <span class="vid-tag">Sample ad · made with AI by us</span>
-      </div>
-    </div>
   </div>
+  <span class="hero-sample">A sample ad, made with AI by us</span>
 </section>
 
 <!-- 2. WHO IT'S FOR -->
 <nav class="strip-lx lite" aria-label="Who we build for">
   <div class="wrap">
     <ul>
-      <li>Salons &amp; spas</li>
+      <li>Salons and spas</li>
       <li>Kids academies</li>
       <li>Gyms</li>
       <li>Car washes</li>
-      <li>Perfume &amp; oud</li>
+      <li>Perfume and oud</li>
       <li>Cafés</li>
     </ul>
   </div>
@@ -84,36 +92,38 @@
 <section class="sec" id="ads" aria-labelledby="adt">
   <div class="wrap">
     <div class="sec-head">
-      <span class="meta rv">Sample ads · made with AI · no client work shown</span>
-      <h2 id="adt" class="rv rv2">ads that make a small shop <span class="gi">look big.</span></h2>
+      <span class="cap rv">Sample ads, made with AI. No client work shown.</span>
+      <h2 id="adt" class="rv rv2">Ads that make a small shop <em>look big.</em></h2>
       <p class="rv rv3">Nobody scrolls past video. Every ad below is a sample we made for an imaginary business in your niche. Yours looks like this, with your shop in it.</p>
     </div>
     <div class="ads-grid">
       <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-salon-poster.jpg" src="/assets/ads/hashmi-salon.mp4" aria-label="Sample AI ad for a salon"></video><button class="play" type="button" aria-label="Play the salon sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Salon</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv rv2"><video preload="none" playsinline poster="/assets/ads/hashmi-academy-poster.jpg" src="/assets/ads/hashmi-academy.mp4" aria-label="Sample AI ad for a kids sports academy"></video><button class="play" type="button" aria-label="Play the academy sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Kids academy</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv rv3"><video preload="none" playsinline poster="/assets/ads/hashmi-gym-poster.jpg" src="/assets/ads/hashmi-gym.mp4" aria-label="Sample AI ad for a gym"></video><button class="play" type="button" aria-label="Play the gym sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Gym</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-perfume-poster.jpg" src="/assets/ads/hashmi-perfume.mp4" aria-label="Sample AI ad for a perfume and oud shop"></video><button class="play" type="button" aria-label="Play the perfume sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Perfume &amp; oud</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv rv2"><video preload="none" playsinline poster="/assets/ads/hashmi-carwash-poster.jpg" src="/assets/ads/hashmi-carwash.mp4" aria-label="Sample AI ad for a car wash"></video><button class="play" type="button" aria-label="Play the car wash sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Car wash</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv rv3"><video preload="none" playsinline poster="/assets/ads/hashmi-karak-poster.jpg" src="/assets/ads/hashmi-karak.mp4" aria-label="Sample AI ad for a karak cafe"></video><button class="play" type="button" aria-label="Play the karak cafe sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Karak café</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-academy-poster.jpg" src="/assets/ads/hashmi-academy.mp4" aria-label="Sample AI ad for a kids sports academy"></video><button class="play" type="button" aria-label="Play the academy sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Kids academy</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-gym-poster.jpg" src="/assets/ads/hashmi-gym.mp4" aria-label="Sample AI ad for a gym"></video><button class="play" type="button" aria-label="Play the gym sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Gym</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-perfume-poster.jpg" src="/assets/ads/hashmi-perfume.mp4" aria-label="Sample AI ad for a perfume and oud shop"></video><button class="play" type="button" aria-label="Play the perfume sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Perfume and oud</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-carwash-poster.jpg" src="/assets/ads/hashmi-carwash.mp4" aria-label="Sample AI ad for a car wash"></video><button class="play" type="button" aria-label="Play the car wash sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Car wash</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-karak-poster.jpg" src="/assets/ads/hashmi-karak.mp4" aria-label="Sample AI ad for a karak cafe"></video><button class="play" type="button" aria-label="Play the karak cafe sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Karak café</b><span>Sample ad</span></figcaption></figure>
       <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-burger-poster.jpg" src="/assets/ads/hashmi-burger.mp4" aria-label="Sample AI ad for a burger restaurant"></video><button class="play" type="button" aria-label="Play the burger sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Burger joint</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv rv2"><video preload="none" playsinline poster="/assets/ads/hashmi-kunafa-poster.jpg" src="/assets/ads/hashmi-kunafa.mp4" aria-label="Sample AI ad for a kunafa dessert shop"></video><button class="play" type="button" aria-label="Play the kunafa sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Kunafa shop</b><span>Sample ad</span></figcaption></figure>
-      <figure class="adc rv rv3"><video preload="none" playsinline poster="/assets/ads/hashmi-smashlab-poster.jpg" src="/assets/ads/hashmi-smashlab.mp4" aria-label="Sample AI ad for a padel club"></video><button class="play" type="button" aria-label="Play the padel club sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Padel club</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-kunafa-poster.jpg" src="/assets/ads/hashmi-kunafa.mp4" aria-label="Sample AI ad for a kunafa dessert shop"></video><button class="play" type="button" aria-label="Play the kunafa sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Kunafa shop</b><span>Sample ad</span></figcaption></figure>
+      <figure class="adc rv"><video preload="none" playsinline poster="/assets/ads/hashmi-smashlab-poster.jpg" src="/assets/ads/hashmi-smashlab.mp4" aria-label="Sample AI ad for a padel club"></video><button class="play" type="button" aria-label="Play the padel club sample ad"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button><figcaption class="adc-meta"><b>Padel club</b><span>Sample ad</span></figcaption></figure>
     </div>
     <p class="ads-note rv">Every video on this page is a sample made by us to show the style. No client work is shown, and no real businesses are featured. A single ad like these is AED 750, or from AED 400 a month on a plan.</p>
     <div class="ask-band rv">
-      <p>Want one with your shop in it?<span class="gi">Free, within 24 hours.</span></p>
+      <p>Want one with your shop in it?<em>Free, within 24 hours.</em></p>
       <a class="btn" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%20want%20the%20free%20ad.%20My%20business%20is%3A%20" target="_blank" rel="noopener" data-cta="ads-free-ad"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 10 10.1 5.3 16 5.3S26.7 10 26.7 15.8 21.9 26.4 16 26.4z"/></svg>Send one photo</a>
     </div>
   </div>
 </section>
 
 <!-- 4. BOT DEMO -->
-<section class="sec hairline-t" id="bot" aria-labelledby="bt">
+<section class="sec hairline-t bd" id="bot" aria-labelledby="bt">
+  <div class="bd-img" style="background-image:url(/assets/ads/stills/salon.jpg)" aria-hidden="true"></div>
+  <div class="bd-veil" aria-hidden="true"></div>
   <div class="wrap bot-grid">
     <div class="rv">
       <div class="bot-phone">
         <div class="bot-screen">
-          <div class="bot-top"><span class="av" aria-hidden="true">G</span><div><b>Glow Salon</b><small>online · demo</small></div></div>
+          <div class="bot-top"><span class="av" aria-hidden="true">G</span><div><b>Glow Salon</b><small>online, demo</small></div></div>
           <div class="bot-body" data-chat role="img" aria-label="Demo of the WhatsApp booking assistant booking a gel manicure">
             <div class="m out">Hi, can I book something for this week?</div>
             <div class="m in typing" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -144,14 +154,14 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
       </div>
     </div>
     <div class="bot-copy">
-      <span class="meta rv">WhatsApp booking assistant</span>
-      <h2 id="bt" class="rv rv2">your receptionist, <span class="gi">awake at 2am.</span></h2>
+      <span class="cap rv">The WhatsApp booking assistant</span>
+      <h2 id="bt" class="rv rv2">Your receptionist, <em>awake at 2am.</em></h2>
       <p class="rv rv3">Customers message at 11 pm. The assistant replies in seconds, shows your real prices, books a free slot and sends the reminder. You see every booking.</p>
       <p class="rv rv3">This is the exact flow of our live demo bot. Try it yourself on a real WhatsApp number.</p>
-      <div class="hero-ctas rv rv4">
+      <div class="hero-ctas rv rv4" style="margin-top:24px">
         <a class="btn btn-2" href="/demos/whatsapp/" data-cta="bot-try-demo">Message the demo salon</a>
       </div>
-      <span class="demo-tag rv rv4">Demo · Glow Salon is a sample business, not a client</span>
+      <span class="demo-tag rv rv4">Glow Salon is a sample business, not a client</span>
     </div>
   </div>
 </section>
@@ -165,8 +175,8 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
 <section class="sec lite" id="how" aria-labelledby="ht">
   <div class="wrap">
     <div class="sec-head">
-      <span class="meta rv">How it works</span>
-      <h2 id="ht" class="rv rv2">three steps. <span class="gi">no tech talk.</span></h2>
+      <span class="cap rv">How it works</span>
+      <h2 id="ht" class="rv rv2">Three steps. <em>No tech talk.</em></h2>
     </div>
     <ol class="steps-lx rv">
       <li><h3>Send a WhatsApp</h3><p>One photo of your shop or product, and what you sell. Two minutes.</p><span class="when">Today</span></li>
@@ -180,40 +190,42 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
   </div>
 </section>
 
-<!-- 6. TWO OFFERS + comparison -->
+<!-- 6. TWO OFFERS -->
 <section class="sec lite hairline-t" id="build" aria-labelledby="sv">
   <div class="wrap">
     <div class="sec-head">
-      <span class="meta rv">One system · two parts</span>
-      <h2 id="sv" class="rv rv2">get booked. <span class="gi">get seen.</span></h2>
+      <span class="cap rv">One system, two parts</span>
+      <h2 id="sv" class="rv rv2">Get booked. <em>Get seen.</em></h2>
       <p class="rv rv3">Start with one. Most businesses end up with both.</p>
     </div>
     <div class="offers-lx">
       <a class="offer-card rv" href="/pricing/#booked" data-cta="offer-booked">
-        <span class="meta">01 · One-time</span>
+        <span class="cap">One-time</span>
         <h3>Get booked</h3>
         <p>A website that shows up on Google, plus a WhatsApp assistant that answers and books customers 24/7.</p>
         <em>from AED 2,900, one-time</em>
         <span class="link">See packages</span>
       </a>
-      <a class="offer-card rv rv2" href="/pricing/#seen" data-cta="offer-seen">
-        <span class="meta">02 · Monthly</span>
+      <a class="offer-card rv" href="/pricing/#seen" data-cta="offer-seen">
+        <span class="cap">Monthly</span>
         <h3>Get seen</h3>
         <p>Fresh AI video ads and post ideas every month, so people keep coming back. Cancel anytime.</p>
         <em>from AED 400 a month</em>
         <span class="link">See plans</span>
       </a>
     </div>
-    <p class="rv" style="margin:26px 0 0;font-size:15px;color:#5B5349">Need your own iPhone and Android app? <a class="link" style="margin-top:0" href="/apps/">Custom projects from AED 7,500</a></p>
+    <p class="rv" style="margin:26px 0 0;font-size:15px;color:#5B5349">Need your own iPhone and Android app? <a class="link" href="/apps/">Custom projects from AED 7,500</a></p>
   </div>
 </section>
 
-<!-- comparison teaser (dark) -->
-<section class="sec" aria-labelledby="cmt">
+<!-- comparison (dark, karak backdrop) -->
+<section class="sec bd" aria-labelledby="cmt">
+  <div class="bd-img" style="background-image:url(/assets/ads/stills/karak.jpg)" aria-hidden="true"></div>
+  <div class="bd-veil" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
-      <span class="meta rv">What a month of marketing costs</span>
-      <h2 id="cmt" class="rv rv2">the same job, <span class="gi">three ways.</span></h2>
+      <span class="cap rv">What a month of marketing costs</span>
+      <h2 id="cmt" class="rv rv2">The same job, <em>three ways.</em></h2>
     </div>
     <div class="cmp-lx rv">
       <div><h3>Hire a marketer</h3><p class="cp">AED 8,000+<small>/mo</small></p><p>Salary, visa, insurance, software. One person, sick days and holidays.</p></div>
@@ -228,29 +240,31 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
 <section class="sec lite" id="work" aria-labelledby="wt">
   <div class="wrap">
     <div class="sec-head">
-      <span class="meta rv">Our work · demos you can tap</span>
-      <h2 id="wt" class="rv rv2">every one <span class="gi">opens and works.</span></h2>
+      <span class="cap rv">Demos you can tap</span>
+      <h2 id="wt" class="rv rv2">Every one <em>opens and works.</em></h2>
       <p class="rv rv3">Apps and websites we have built. Try them on your phone. They are demo builds and our own app, labelled honestly.</p>
     </div>
     <div class="pf-lx">
-      <a class="pcard rv" href="https://apps.apple.com/app/earned-reclaim-your-time/id6786606147" target="_blank" rel="noopener"><div class="pshot"><img src="/assets/img/work-earned.webp" alt="Earned app screens" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag live">Live on the App Store</span><h3>Earned</h3><p>Our own iPhone app, live on the App Store</p><span class="popen">Open it →</span></div></a>
-      <a class="pcard rv rv2" href="/demos/academy/"><div class="pshot"><img src="/assets/img/work-tide.webp" alt="Tide Swim Academy app screens with WhatsApp booking" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">Demo you can tap</span><h3>Tide Swim Academy</h3><p>Academy system with WhatsApp booking and payments</p><span class="popen">Open it →</span></div></a>
-      <a class="pcard rv" href="/demos/qahwa/"><div class="pshot"><img src="/assets/img/work-qahwa.webp" alt="Qahwa Club café app screens" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">App concept</span><h3>Qahwa Club</h3><p>Café app: order ahead, custom drinks, stamp card</p><span class="popen">Open it →</span></div></a>
-      <a class="pcard rv rv2" href="/demos/glow/"><div class="pshot"><img src="/assets/img/work-glow.webp" alt="Glow Lounge salon booking app screens" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">App concept</span><h3>Glow Lounge</h3><p>Salon app: booking, stylists, deposits, reminders</p><span class="popen">Open it →</span></div></a>
+      <a class="pcard rv" href="https://apps.apple.com/app/earned-reclaim-your-time/id6786606147" target="_blank" rel="noopener"><div class="pshot"><img src="/assets/img/work-earned.webp" alt="Earned app screens" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag live">Live on the App Store</span><h3>Earned</h3><p>Our own iPhone app, live on the App Store</p><span class="popen">Open it</span></div></a>
+      <a class="pcard rv" href="/demos/academy/"><div class="pshot"><img src="/assets/img/work-tide.webp" alt="Tide Swim Academy app screens with WhatsApp booking" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">Demo you can tap</span><h3>Tide Swim Academy</h3><p>Academy system with WhatsApp booking and payments</p><span class="popen">Open it</span></div></a>
+      <a class="pcard rv" href="/demos/qahwa/"><div class="pshot"><img src="/assets/img/work-qahwa.webp" alt="Qahwa Club café app screens" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">App concept</span><h3>Qahwa Club</h3><p>Café app: order ahead, custom drinks, stamp card</p><span class="popen">Open it</span></div></a>
+      <a class="pcard rv" href="/demos/glow/"><div class="pshot"><img src="/assets/img/work-glow.webp" alt="Glow Lounge salon booking app screens" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">App concept</span><h3>Glow Lounge</h3><p>Salon app: booking, stylists, deposits, reminders</p><span class="popen">Open it</span></div></a>
     </div>
     <div class="pf-lx three" style="margin-top:clamp(20px,3vw,40px)">
-      <a class="pcard rv" href="/gym.html"><div class="pshot"><img src="/assets/img/work-apex.webp" alt="APEX gym website" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">Website concept</span><h3>APEX</h3><p>Training club: timetable, plans, free session booking</p><span class="popen">Open it →</span></div></a>
-      <a class="pcard rv rv2" href="/boutique.html"><div class="pshot"><img src="/assets/img/work-nour.webp" alt="Nour fashion website" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">Website concept</span><h3>Nour</h3><p>Modest fashion label with a working shopping bag</p><span class="popen">Open it →</span></div></a>
-      <a class="pcard rv rv3" href="/restaurant.html"><div class="pshot"><img src="/assets/img/work-safwa.webp" alt="Safwa restaurant website" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">Website concept</span><h3>Safwa</h3><p>Fine dining: full menu and table reservations</p><span class="popen">Open it →</span></div></a>
+      <a class="pcard rv" href="/gym.html"><div class="pshot"><img src="/assets/img/work-apex.webp" alt="APEX gym website" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">Website concept</span><h3>APEX</h3><p>Training club: timetable, plans, free session booking</p><span class="popen">Open it</span></div></a>
+      <a class="pcard rv" href="/boutique.html"><div class="pshot"><img src="/assets/img/work-nour.webp" alt="Nour fashion website" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">Website concept</span><h3>Nour</h3><p>Modest fashion label with a working shopping bag</p><span class="popen">Open it</span></div></a>
+      <a class="pcard rv" href="/restaurant.html"><div class="pshot"><img src="/assets/img/work-safwa.webp" alt="Safwa restaurant website" loading="lazy" width="1600" height="1000"></div><div class="pmeta"><span class="tag">Website concept</span><h3>Safwa</h3><p>Fine dining: full menu and table reservations</p><span class="popen">Open it</span></div></a>
     </div>
   </div>
 </section>
 
-<!-- 8. FOUNDING CLIENTS -->
-<section class="sec" aria-labelledby="fc">
+<!-- 8. FOUNDING CLIENTS (perfume backdrop) -->
+<section class="sec bd" aria-labelledby="fc">
+  <div class="bd-img" style="background-image:url(/assets/ads/stills/perfume.jpg)" aria-hidden="true"></div>
+  <div class="bd-veil" aria-hidden="true"></div>
   <div class="wrap found-lx">
-    <span class="meta rv">Founding clients · 3 spots</span>
-    <h2 id="fc" class="rv rv2">the first three get <span class="gi">launch prices, locked.</span></h2>
+    <span class="cap rv">Founding clients, three spots</span>
+    <h2 id="fc" class="rv rv2">The first three get <em>launch prices, locked.</em></h2>
     <p class="rv rv3">We are new, and we say so. Our first 3 founding clients lock launch prices for 12 months in return for a case study. Your business becomes the proof on this page.</p>
     <div class="hero-ctas rv rv4">
       <a class="btn" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%27m%20interested%20in%20a%20founding%20client%20spot.%20My%20business%20is%3A%20" target="_blank" rel="noopener" data-cta="founding-wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 10 10.1 5.3 16 5.3S26.7 10 26.7 15.8 21.9 26.4 16 26.4z"/></svg>Claim a spot</a>
@@ -263,8 +277,8 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
 <section class="sec lite" aria-labelledby="fq">
   <div class="wrap">
     <div class="sec-head">
-      <span class="meta rv">Questions</span>
-      <h2 id="fq" class="rv rv2">asked <span class="gi">before you ask.</span></h2>
+      <span class="cap rv">Questions</span>
+      <h2 id="fq" class="rv rv2">Asked <em>before you ask.</em></h2>
     </div>
     <div class="faq-lx rv">
       <details><summary>Is the free ad really free?</summary><p>Yes. Send us one photo of your shop or product on WhatsApp. Within 24 hours you receive a short AI video ad, free. No card, no sign-up. If you like it, we talk. If not, keep it anyway.</p></details>
@@ -276,15 +290,17 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
   </div>
 </section>
 
-<!-- 10. CLOSE -->
-<section class="sec hairline-t close-lx" id="start" aria-labelledby="ct">
+<!-- 10. CLOSE (smashlab backdrop) -->
+<section class="sec hairline-t close-lx bd" id="start" aria-labelledby="ct">
+  <div class="bd-img" style="background-image:url(/assets/ads/stills/smashlab.jpg)" aria-hidden="true"></div>
+  <div class="bd-veil" aria-hidden="true"></div>
   <div class="wrap">
-    <span class="meta rv">One photo. 24 hours.</span>
-    <h2 id="ct" class="rv rv2">see your ad first.<br><span class="gi">then decide.</span></h2>
-    <p class="lede rv rv3" style="max-width:520px">WhatsApp opens with a message ready. Or pick a 30-minute Google Meet slot and see a live demo.</p>
+    <span class="cap rv">One photo. 24 hours.</span>
+    <h2 id="ct" class="rv rv2">See your ad first.<br><em>Then decide.</em></h2>
+    <p class="lede rv rv3" style="max-width:520px;margin-left:auto;margin-right:auto">WhatsApp opens with a message ready. Or pick a 30-minute Google Meet slot and see a live demo.</p>
     <div class="hero-ctas rv rv4">
       <a class="btn btn-xl" href="https://wa.me/971501351630?text=Hi%20Ali%2C%20I%20want%20the%20free%20ad.%20My%20business%20is%3A%20" target="_blank" rel="noopener" data-cta="close-free-ad"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 10 10.1 5.3 16 5.3S26.7 10 26.7 15.8 21.9 26.4 16 26.4z"/></svg>Claim my free ad</a>
-      <a class="btn btn-xl btn-2" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3mhcpczZA-G5d07i7NI6GrL7w4VSBRHbVHX_467HKG3_Ng0UHUy9YvW1HwX8df-BC1B2a6IXee" target="_blank" rel="noopener" data-cta="close-call">Book a free video call</a>
+      <a class="btn btn-2" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3mhcpczZA-G5d07i7NI6GrL7w4VSBRHbVHX_467HKG3_Ng0UHUy9YvW1HwX8df-BC1B2a6IXee" target="_blank" rel="noopener" data-cta="close-call">Book a free video call</a>
     </div>
     <details class="form-wrap">
       <summary>Rather fill in a form?</summary>
@@ -315,7 +331,9 @@ We'll send you a reminder the day before. Reply anytime to change it.</div>
 </footer>
 
 <script src="/assets/v7/site.js?v=5" defer></script>
-<script src="/assets/v7/lux.js?v=1" defer></script>
+<script src="/assets/vendor/gsap/gsap.min.js" defer></script>
+<script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+<script src="/assets/v7/lux.js?v=3" defer></script>
 <script src="/assets/v7/wa.js?v=12" defer></script>
 </body>
 </html>
