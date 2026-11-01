@@ -430,3 +430,4 @@ body.lux .work,body.lux .how,body.lux .close,body.lux .foot{content-visibility:v
 body.lux .meta{display:block;font:italic 400 15px/1.5 var(--serif);color:var(--gold);letter-spacing:0;text-transform:none}
 body.lux .lite .meta{color:var(--gold-deep)}
 body.lux:not(:has(.hero-media)) .hero-lx{min-height:0;padding:clamp(120px,14vw,170px) 0 clamp(56px,8vw,90px);align-items:flex-start}
+.bd>.bd-img.strong{opacity:.34}
