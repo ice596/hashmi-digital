@@ -1,0 +1,81 @@
+/* Academy marketing pages: hub, articles, checkup tool */
+.ac-hero{padding:56px 0 24px}
+.ac-hero h1{font-size:clamp(34px,5.4vw,58px);line-height:1.04;color:var(--ink);max-width:16ch}
+.ac-hero h1 em{font-style:normal;color:var(--or)}
+.ac-hero .lede{font-size:clamp(18px,2vw,21px);color:var(--grey);max-width:56ch;margin:18px 0 26px}
+.ac-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ac-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.ac-shots{display:flex;gap:14px;justify-content:center}
+.ac-shots img{width:44%;max-width:220px;height:auto;filter:drop-shadow(0 18px 30px rgba(31,27,36,.18))}
+.ac-shots img:nth-child(2){transform:translateY(28px)}
+.ac-sec{padding:56px 0}
+.ac-sec h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:14px}
+.ac-sec .sub{color:var(--grey);max-width:60ch;margin:0 0 28px}
+.ac-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ac-card{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:22px}
+.ac-card b{display:block;font:600 21px/1.2 var(--head);margin-bottom:6px}
+.ac-card p{margin:0;color:var(--grey);font-size:16px}
+.ac-card .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--or-soft);color:var(--or);font:700 20px var(--head);margin-bottom:12px}
+.ac-steps{counter-reset:s;display:grid;gap:12px;max-width:720px;padding:0;list-style:none}
+.ac-steps li{counter-increment:s;position:relative;padding:16px 18px 16px 64px;background:#fff;border:2px solid var(--line);border-radius:16px}
+.ac-steps li::before{content:counter(s);position:absolute;left:16px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--or);color:#fff;display:grid;place-items:center;font:700 17px var(--head)}
+.ac-offer{background:var(--navy);color:#fff;border-radius:28px;padding:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.ac-offer h2{color:#fff}
+.ac-offer ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.ac-offer li{background:rgba(255,255,255,.08);border-radius:14px;padding:12px 16px;font-weight:700}
+.ac-offer li span{display:block;font-weight:500;opacity:.75;font-size:15px}
+.ac-offer .price{font:600 46px/1 var(--head);color:var(--sun)}
+.ac-offer .price small{font-size:18px;color:#fff;opacity:.8}
+.ac-list a{display:block;padding:18px 0;border-bottom:2px solid var(--line);color:var(--ink);text-decoration:none;font:600 21px/1.3 var(--head)}
+.ac-list a span{display:block;font:500 16px var(--body);color:var(--grey);margin-top:4px}
+.ac-list a:hover{color:var(--or)}
+/* article */
+.art{max-width:720px;margin:0 auto;padding:48px 24px 24px}
+.art .crumb{font-size:15px;color:var(--grey);margin-bottom:14px}
+.art .crumb a{color:var(--grey)}
+.art h1{font-size:clamp(32px,4.6vw,48px);line-height:1.08;margin-bottom:16px}
+.art .meta{color:var(--grey);font-size:15px;margin-bottom:28px}
+.art h2{font-size:28px;margin:40px 0 12px}
+.art h3{font-size:21px;margin:28px 0 8px}
+.art p,.art li{font-size:18px;line-height:1.65}
+.art ul,.art ol{padding-left:22px}
+.art li{margin-bottom:8px}
+.art figure{margin:28px 0;text-align:center}
+.art figure img{max-width:260px;width:60%;height:auto;filter:drop-shadow(0 14px 26px rgba(31,27,36,.16))}
+.art figcaption{font-size:14px;color:var(--grey);margin-top:8px}
+.art .box{background:#fff;border:2px solid var(--line);border-left:6px solid var(--or);border-radius:14px;padding:18px 20px;margin:24px 0}
+.art .box b{font-family:var(--head);font-weight:600}
+.art table{width:100%;border-collapse:collapse;font-size:16px;margin:18px 0}
+.art th,.art td{text-align:left;padding:10px 12px;border-bottom:2px solid var(--line)}
+.art th{font-family:var(--head);font-weight:600}
+.art-cta{max-width:720px;margin:24px auto 64px;padding:0 24px}
+.art-cta .ac-offer{grid-template-columns:1fr}
+/* checkup tool */
+.chk{max-width:720px;margin:0 auto;padding:40px 24px 64px}
+.chk h1{font-size:clamp(32px,4.6vw,48px);line-height:1.08}
+.chk .lede{color:var(--grey);font-size:19px;margin:14px 0 26px}
+.chk-bar{height:10px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:22px}
+.chk-bar i{display:block;height:100%;width:0;background:var(--or);transition:width .35s ease}
+.chk-q{background:#fff;border:2px solid var(--line);border-radius:22px;padding:26px}
+.chk-q h2{font-size:24px;margin-bottom:6px}
+.chk-q .hint{color:var(--grey);font-size:16px;margin:0 0 18px}
+.chk-opts{display:grid;gap:10px}
+.chk-opts button{text-align:left;padding:15px 18px;border-radius:14px;border:2px solid var(--line-2);background:var(--canvas);font:700 17px var(--body);color:var(--ink);cursor:pointer;transition:border-color .15s,transform .1s}
+.chk-opts button:hover{border-color:var(--or)}
+.chk-opts button:active{transform:scale(.99)}
+.chk-back{background:none;border:0;color:var(--grey);font:700 15px var(--body);margin-top:14px;cursor:pointer;padding:6px 0}
+.chk-res{display:none}
+.chk-score{display:flex;align-items:center;gap:22px;background:#fff;border:2px solid var(--line);border-radius:22px;padding:24px;margin-bottom:18px}
+.chk-ring{--p:0;width:112px;height:112px;border-radius:50%;flex:none;display:grid;place-items:center;background:conic-gradient(var(--c,#E8560C) calc(var(--p)*1%),var(--line) 0)}
+.chk-ring b{width:86px;height:86px;border-radius:50%;background:#fff;display:grid;place-items:center;font:600 30px var(--head)}
+.chk-score h2{font-size:26px;margin-bottom:4px}
+.chk-score p{margin:0;color:var(--grey)}
+.chk-fix{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:10px}
+.chk-fix b{display:block;font:600 19px var(--head);margin-bottom:4px}
+.chk-fix p{margin:0;color:var(--grey);font-size:16px}
+.chk-fix.good{border-color:var(--mint-soft);background:#F4FCF8}
+.chk-send{background:var(--navy);color:#fff;border-radius:22px;padding:26px;margin-top:22px}
+.chk-send h2{color:#fff;font-size:24px;margin-bottom:6px}
+.chk-send p{opacity:.85;margin:0 0 16px}
+.chk-send input{width:100%;box-sizing:border-box;padding:14px 16px;border-radius:12px;border:0;font:600 17px var(--body);margin-bottom:12px}
+@media (max-width:900px){.ac-grid,.ac-offer{grid-template-columns:1fr}.ac-cards{grid-template-columns:1fr}.ac-offer{padding:28px}}
