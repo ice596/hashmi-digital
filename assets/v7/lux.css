@@ -363,3 +363,15 @@ body.lux.acad .ac-list a{border-bottom:1px solid var(--hair);color:var(--paper);
 body.lux.acad .ac-list a span{font:400 15px var(--sans);color:var(--t45)}
 body.lux.acad .ac-list a:hover{color:var(--gold)}
 body.lux.acad .ac-shots{position:relative}
+
+/* critique fixes */
+@media(min-width:1021px){
+  .vid-phone{width:min(368px,78vw)}
+  .hero-grid{grid-template-columns:1.05fr .95fr}
+}
+.cmp-lx .cp{font-size:clamp(22px,2.1vw,30px)}
+.cmp-lx .cp,.cmp-lx h3{text-wrap:balance}
+@media(max-width:1020px){
+  .bot-grid>div:first-child{order:2}
+  .bot-grid>.bot-copy{order:1}
+}
